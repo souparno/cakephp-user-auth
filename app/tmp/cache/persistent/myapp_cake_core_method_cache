@@ -1,0 +1,2 @@
+1409433177
+a:2:{s:4:"name";a:6:{s:32:"bdfd36636335249b3b2903c9fdf5c144";s:19:"`db_cakephpexample`";s:32:"4bf8c442beb0250572f3070bda9f4074";s:7:"`roles`";s:32:"200072d59800a6dfdf4020df7a01b767";s:11:"`Role`.`id`";s:32:"2e2a80ad34298a552f36bfdf33dad7cc";s:14:"`Role`.`title`";s:32:"b4686556afaf1bba0c5270574ca15c54";s:6:"`Role`";s:32:"f94a437fb7858e092079378f93ef2c71";s:7:"`users`";}s:6:"fields";a:1:{s:32:"cbc383f48d15b801a2d24d734b5894cc";a:2:{i:0;s:11:"`Role`.`id`";i:1;s:14:"`Role`.`title`";}}}
