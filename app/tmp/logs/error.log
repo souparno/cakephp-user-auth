@@ -148,3 +148,93 @@ Stack Trace:
 #14 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #15 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #16 {main}
+2014-08-31 22:47:28 Error: [MissingTableException] Table csubcategories for model Csubcategory was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'csubcategories',
+  'class' => 'Csubcategory',
+  'ds' => 'default',
+)
+Request URL: /products
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Model/Model.php(3525): Model->setSource('csubcategories')
+#1 /var/www/cakephp.local/lib/Cake/Model/Model.php(1365): Model->getDataSource()
+#2 /var/www/cakephp.local/lib/Cake/Model/Datasource/DboSource.php(2494): Model->schema()
+#3 /var/www/cakephp.local/lib/Cake/Model/Datasource/DboSource.php(1719): DboSource->fields(Object(AppModel), 'Csubcategory', '')
+#4 /var/www/cakephp.local/lib/Cake/Model/Datasource/DboSource.php(1093): DboSource->generateAssociationQuery(Object(Product), Object(AppModel), 'belongsTo', 'Csubcategory', Array, Array, false)
+#5 /var/www/cakephp.local/lib/Cake/Model/Model.php(2921): DboSource->read(Object(Product), Array)
+#6 /var/www/cakephp.local/lib/Cake/Model/Model.php(2893): Model->_readDataSource('all', Array)
+#7 /var/www/cakephp.local/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#8 /var/www/cakephp.local/app/Controller/ProductsController.php(25): PaginatorComponent->paginate()
+#9 [internal function]: ProductsController->index()
+#10 /var/www/cakephp.local/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#11 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest))
+#13 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-08-31 22:49:54 Error: [MissingTableException] Table menus for model Menu was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'menus',
+  'class' => 'Menu',
+  'ds' => 'default',
+)
+Request URL: /products
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Model/Model.php(3525): Model->setSource('menus')
+#1 /var/www/cakephp.local/lib/Cake/Model/Model.php(1365): Model->getDataSource()
+#2 /var/www/cakephp.local/lib/Cake/Model/Datasource/DboSource.php(2494): Model->schema()
+#3 /var/www/cakephp.local/lib/Cake/Model/Datasource/DboSource.php(1719): DboSource->fields(Object(AppModel), 'Menu', '')
+#4 /var/www/cakephp.local/lib/Cake/Model/Datasource/DboSource.php(1093): DboSource->generateAssociationQuery(Object(Product), Object(AppModel), 'belongsTo', 'Menu', Array, Array, false)
+#5 /var/www/cakephp.local/lib/Cake/Model/Model.php(2921): DboSource->read(Object(Product), Array)
+#6 /var/www/cakephp.local/lib/Cake/Model/Model.php(2893): Model->_readDataSource('all', Array)
+#7 /var/www/cakephp.local/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#8 /var/www/cakephp.local/app/Controller/ProductsController.php(25): PaginatorComponent->paginate()
+#9 [internal function]: ProductsController->index()
+#10 /var/www/cakephp.local/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#11 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest))
+#13 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-08-31 23:13:43 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Product'
+Request URL: /products
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/cakephp.local/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Product...', Array)
+#2 /var/www/cakephp.local/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Product...', Array, Array)
+#3 /var/www/cakephp.local/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Product...', false)
+#4 /var/www/cakephp.local/lib/Cake/Model/Model.php(2921): DboSource->read(Object(Product), Array)
+#5 /var/www/cakephp.local/lib/Cake/Model/Model.php(2893): Model->_readDataSource('all', Array)
+#6 /var/www/cakephp.local/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/cakephp.local/app/Controller/ProductsController.php(25): PaginatorComponent->paginate()
+#8 [internal function]: ProductsController->index()
+#9 /var/www/cakephp.local/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#10 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest))
+#12 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-08-31 23:25:19 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Product'
+Request URL: /products
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/cakephp.local/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Product...', Array)
+#2 /var/www/cakephp.local/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Product...', Array, Array)
+#3 /var/www/cakephp.local/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Product...', false)
+#4 /var/www/cakephp.local/lib/Cake/Model/Model.php(2921): DboSource->read(Object(Product), Array)
+#5 /var/www/cakephp.local/lib/Cake/Model/Model.php(2893): Model->_readDataSource('all', Array)
+#6 /var/www/cakephp.local/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/cakephp.local/app/Controller/ProductsController.php(25): PaginatorComponent->paginate()
+#8 [internal function]: ProductsController->index()
+#9 /var/www/cakephp.local/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#10 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest))
+#12 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-08-31 23:26:33 Error: Fatal Error (4): syntax error, unexpected ';', expecting function (T_FUNCTION) in [/var/www/cakephp.local/app/Model/Product.php, line 127]
+2014-08-31 23:26:33 Error: [FatalErrorException] syntax error, unexpected ';', expecting function (T_FUNCTION)
+Request URL: /products
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/cakeph...', 127)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/cakeph...', 127, Array)
+#2 /var/www/cakephp.local/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/cakeph...', 127, Array)
+#3 /var/www/cakephp.local/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
