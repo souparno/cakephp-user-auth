@@ -9,6 +9,10 @@
     </fieldset>
 <?php echo $this->Form->end(__('Login')); ?>
 </div>
-<?php
- echo $this->Html->link( "Add A New User",   array('action'=>'add') ); 
-?>
+<div class="actions">
+    <h3><?php echo __('Actions'); ?></h3>
+    <ul>
+        <li><?php echo $this->Html->link(__('Register'), array('action' => 'add')); ?></li>
+        <li><?php echo $this->Html->link(__('Products'), array('controller' =>'products', 'action' => 'index')); ?> </li>
+    </ul>
+</div>   
