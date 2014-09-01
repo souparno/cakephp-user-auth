@@ -22,8 +22,19 @@ class ProductsController extends AppController {
      *
      * @return void
      */
-    public function index() {
-        $this->Product->recursive = 0;
+    public function index($param=NULL) {
+        
+        if ($param) {
+            echo $param;
+            //var_dump($this->request->data);
+        }
+        
+        $this->loadModel("menu");
+        $this->set("menus",$this->menu->find("all"));
+        $this->paginate = array(
+            'limit' => 4,
+            'order' => array('product.id' => 'asc')
+        );
         $this->set('products', $this->Paginator->paginate());
     }
 

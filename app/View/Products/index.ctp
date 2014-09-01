@@ -1,4 +1,12 @@
+
 <div class="products index">
+    
+<ul style="">
+    <?php foreach ($menus as $menu){ ?>
+      <li><?php echo $this->Html->link(__($menu['menu']['title']), array('controller' => 'products', 'action' => 'index',$menu['menu']['id'])); ?> </li>
+    <?php } ?>
+</ul>    
+    
     <h2><?php echo __('Products'); ?></h2>
     <table cellpadding="0" cellspacing="0">
         <thead>
