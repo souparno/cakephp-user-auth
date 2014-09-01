@@ -29,6 +29,7 @@ class ProductsController extends AppController {
      */
     public function index() {
         $this->Product->recursive = 0;
+        $this->set('menus',$this->Product->Subcategory->Category->Menu->find());
         $this->set('products', $this->Paginator->paginate());
     }
 

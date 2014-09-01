@@ -1,10 +1,19 @@
 <?php
 
-App::uses('AuthComponent', 'Controller/Component');
+App::uses('AppModel', 'Model');
 
+/**
+ * User Model
+ *
+ * @property Role $Role
+ */
 class User extends AppModel {
 
-    public $avatarUploadDir = 'img/avatars';
+    /**
+     * Validation rules
+     *
+     * @var array
+     */
     public $validate = array(
         'username' => array(
             'nonEmpty' => array(
@@ -60,12 +69,15 @@ class User extends AppModel {
                 'message' => 'Usernames must be between 6 to 60 characters'
             )
         ),
-        'role' => array(
-            'valid' => array(
-                'rule' => array('inList', array('king', 'queen', 'bishop', 'rook', 'knight', 'pawn')),
-                'message' => 'Please enter a valid role',
-                'allowEmpty' => false
-            )
+        'role_id' => array(
+            'numeric' => array(
+                'rule' => array('numeric'),
+            //'message' => 'Your custom message here',
+            //'allowEmpty' => false,
+            //'required' => false,
+            //'last' => false, // Stop validation after this rule
+            //'on' => 'create', // Limit validation to 'create' or 'update' operations
+            ),
         ),
         'password_update' => array(
             'min_length' => array(
@@ -81,7 +93,17 @@ class User extends AppModel {
                 'message' => 'Both passwords must match.',
                 'required' => false,
             )
-        )
+        ),
+        'status' => array(
+            'boolean' => array(
+                'rule' => array('boolean'),
+            //'message' => 'Your custom message here',
+            //'allowEmpty' => false,
+            //'required' => false,
+            //'last' => false, // Stop validation after this rule
+            //'on' => 'create', // Limit validation to 'create' or 'update' operations
+            ),
+        ),
     );
 
     /**
@@ -152,7 +174,7 @@ class User extends AppModel {
         return preg_match('/^[a-zA-Z0-9_ \-]*$/', $value);
     }
 
-    public function equaltofield($check, $otherfield) {      
+    public function equaltofield($check, $otherfield) {
         //get name of field 
         $fname = '';
         foreach ($check as $key => $value) {
@@ -182,6 +204,21 @@ class User extends AppModel {
         return parent::beforeSave($options);
     }
 
-}
+    //The Associations below have been created with all possible keys, those that are not needed can be removed
 
-?>
+    /**
+     * belongsTo associations
+     *
+     * @var array
+     */
+    public $belongsTo = array(
+        'Role' => array(
+            'className' => 'Role',
+            'foreignKey' => 'role_id',
+            'conditions' => '',
+            'fields' => '',
+            'order' => ''
+        )
+    );
+
+}

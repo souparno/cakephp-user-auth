@@ -16,6 +16,11 @@
 			<?php echo h($user['User']['password']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Email'); ?></dt>
+		<dd>
+			<?php echo h($user['User']['email']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Role'); ?></dt>
 		<dd>
 			<?php echo $this->Html->link($user['Role']['title'], array('controller' => 'roles', 'action' => 'view', $user['Role']['id'])); ?>
@@ -29,6 +34,11 @@
 		<dt><?php echo __('Modified'); ?></dt>
 		<dd>
 			<?php echo h($user['User']['modified']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Status'); ?></dt>
+		<dd>
+			<?php echo h($user['User']['status']); ?>
 			&nbsp;
 		</dd>
 	</dl>
