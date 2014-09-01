@@ -64,8 +64,6 @@
 <?php endif; ?>
 
 	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Subcategory'), array('controller' => 'subcategories', 'action' => 'add')); ?> </li>
-		</ul>
+<?php echo $this->element("sidenav"); ?>
 	</div>
 </div>

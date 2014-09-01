@@ -52,8 +52,6 @@
 <?php endif; ?>
 
 	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Category'), array('controller' => 'categories', 'action' => 'add')); ?> </li>
-		</ul>
+<?php echo $this->element("sidenav"); ?>
 	</div>
 </div>

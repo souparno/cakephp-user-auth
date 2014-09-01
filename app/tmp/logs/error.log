@@ -808,3 +808,105 @@ Request URL: /img/images/BNR%20-%20000003.jpg
 Stack Trace:
 #0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-09-01 20:29:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/images/BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 20:30:54 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/images/BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 20:31:45 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/images/BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 20:33:05 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/images/BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 20:38:15 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/cakephp.local/app/Controller/ProductsController.php, line 32]
+2014-09-01 20:38:15 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /products
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/cakeph...', 32)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/cakeph...', 32, Array)
+#2 /var/www/cakephp.local/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/cakeph...', 32, Array)
+#3 /var/www/cakephp.local/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-01 20:39:09 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/images/BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 20:39:36 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/images/BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 20:39:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/images/BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 20:39:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/images/BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 21:20:29 Error: Fatal Error (4): syntax error, unexpected '<' in [/var/www/cakephp.local/app/View/Elements/sidenav.ctp, line 2]
+2014-09-01 21:20:29 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/cakeph...', 2)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/cakeph...', 2, Array)
+#2 /var/www/cakephp.local/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/cakeph...', 2, Array)
+#3 /var/www/cakephp.local/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-01 21:22:11 Error: Fatal Error (4): syntax error, unexpected '<' in [/var/www/cakephp.local/app/View/Elements/sidenav.ctp, line 2]
+2014-09-01 21:22:11 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/cakeph...', 2)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/cakeph...', 2, Array)
+#2 /var/www/cakephp.local/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/cakeph...', 2, Array)
+#3 /var/www/cakephp.local/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
