@@ -9,6 +9,8 @@ App::uses('AppController', 'Controller');
  * @property PaginatorComponent $Paginator
  */
 class ProductsController extends AppController {
+    
+    
 
     /**
      * Components
