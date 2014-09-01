@@ -29,7 +29,7 @@
 		<td><?php echo h($product['Product']['usdprice']); ?>&nbsp;</td>
 		<td><?php echo h($product['Product']['features']); ?>&nbsp;</td>
 		<td><?php echo h($product['Product']['description']); ?>&nbsp;</td>
-		<td><?php echo h($product['Product']['image1']); ?>&nbsp;</td>
+                <td><?php echo $this->Html->image("images/".h($product['Product']['image1']), array('height'=>'auto','width'=>'200px')); ?>  &nbsp;</td>
 		<td><?php echo h($product['Product']['image1_small']); ?>&nbsp;</td>
 		<td><?php echo h($product['Product']['created']); ?>&nbsp;</td>
 		<td><?php echo h($product['Product']['modified']); ?>&nbsp;</td>

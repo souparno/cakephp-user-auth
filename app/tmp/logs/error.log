@@ -238,3 +238,535 @@ Stack Trace:
 #3 /var/www/cakephp.local/lib/Cake/Core/App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000005.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000005.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000005.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000009.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000009.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000009.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000008.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000008.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000008.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000007.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000007.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000007.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000003.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000003.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000011.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000011.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000011.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000010.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000010.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000010.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000012.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000012.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000012.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000013.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000013.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000013.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000014.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000014.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000014.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000015.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000015.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000015.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000016.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000016.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000016.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000017.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000017.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000017.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000018.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000018.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000018.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000019.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000019.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000019.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000020.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000020.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000020.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000021.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000021.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000021.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000022.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000022.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000022.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000023.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000023.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000023.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:03:12 Error: [MissingControllerException] Controller class BNR-000024.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000024.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000024.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:04:22 Error: [MissingControllerException] Controller class BNR-000003.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000003.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:04:27 Error: [MissingControllerException] Controller class BNR-000003.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000003.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:04:29 Error: [MissingControllerException] Controller class AppBNR-000003.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'AppBNR-000003.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /appBNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:04:30 Error: [MissingActionException] Action AppController::BNR - 000003.jpg() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'BNR - 000003.jpg',
+)
+Request URL: /app/BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-01 18:04:34 Error: [MissingActionException] Action AppController::webBNR - 000003.jpg() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webBNR - 000003.jpg',
+)
+Request URL: /app/webBNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-01 18:04:35 Error: [MissingActionException] Action AppController::webrootBNR - 000003.jpg() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webrootBNR - 000003.jpg',
+)
+Request URL: /app/webrootBNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-01 18:04:35 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /app/webroot/BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-01 18:04:37 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /app/webroot/filesBNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-01 18:04:39 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /app/webroot/files/imagesBNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-01 18:04:41 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /app/webroot/files/images/BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-01 18:06:57 Error: [MissingControllerException] Controller class BNR-000003.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000003.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:57 Error: [MissingControllerException] Controller class BNR-000009.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000009.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000009.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:57 Error: [MissingControllerException] Controller class BNR-000010.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000010.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000010.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:57 Error: [MissingControllerException] Controller class BNR-000008.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000008.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000008.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:57 Error: [MissingControllerException] Controller class BNR-000007.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000007.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000007.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:57 Error: [MissingControllerException] Controller class BNR-000011.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000011.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000011.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:57 Error: [MissingControllerException] Controller class BNR-000012.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000012.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000012.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:57 Error: [MissingControllerException] Controller class BNR-000013.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000013.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000013.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:57 Error: [MissingControllerException] Controller class BNR-000014.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000014.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000014.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:57 Error: [MissingControllerException] Controller class BNR-000015.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000015.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000015.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:57 Error: [MissingControllerException] Controller class BNR-000016.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000016.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000016.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:57 Error: [MissingControllerException] Controller class BNR-000005.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000005.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000005.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:57 Error: [MissingControllerException] Controller class BNR-000017.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000017.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000017.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:57 Error: [MissingControllerException] Controller class BNR-000018.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000018.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000018.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:57 Error: [MissingControllerException] Controller class BNR-000019.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000019.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000019.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:58 Error: [MissingControllerException] Controller class BNR-000020.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000020.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000020.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:58 Error: [MissingControllerException] Controller class BNR-000021.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000021.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000021.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:58 Error: [MissingControllerException] Controller class BNR-000022.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000022.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000022.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:58 Error: [MissingControllerException] Controller class BNR-000023.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000023.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000023.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:06:58 Error: [MissingControllerException] Controller class BNR-000024.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'BNR-000024.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /BNR%20-%20000024.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:07:44 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /app/webroot/files/images/BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-01 18:22:02 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /app/webroot/files/images/BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-01 18:29:49 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/images/BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:30:31 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/images/BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:42:57 Error: Fatal Error (4): syntax error, unexpected 'array' (T_ARRAY) in [/var/www/cakephp.local/app/View/Products/index.ctp, line 32]
+2014-09-01 18:42:57 Error: [FatalErrorException] syntax error, unexpected 'array' (T_ARRAY)
+Request URL: /products
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/cakeph...', 32)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/cakeph...', 32, Array)
+#2 /var/www/cakephp.local/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/cakeph...', 32, Array)
+#3 /var/www/cakephp.local/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-01 18:44:27 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/images/BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 18:45:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/images/BNR%20-%20000003.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
