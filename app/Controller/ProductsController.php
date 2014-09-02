@@ -9,8 +9,6 @@ App::uses('AppController', 'Controller');
  * @property PaginatorComponent $Paginator
  */
 class ProductsController extends AppController {
-    
-    
 
     /**
      * Components
@@ -24,20 +22,65 @@ class ProductsController extends AppController {
      *
      * @return void
      */
-    public function index($param=NULL) {
-        
-        if ($param) {
-            echo $param;
-            //var_dump($this->request->data);
-        }
-        
+    public function index($param = NULL) {
+
+        $this->layout = "default_attirezone";
+
         $this->loadModel("menu");
-        $this->set("menus",$this->menu->find("all"));
+        $this->loadModel("category");
+        $this->loadModel("subcategory");
+
+
+
+        $this->set("menus", $this->menu->find("all"));
+        $this->set("categories", $this->category->find("all"));
+        $this->set("subcategories", $this->subcategory->find("all"));
+
+        $options = array();
+
+        if ($param) {
+            $search = split("-", $param);
+            switch ($search[0]) {
+                case "menu":
+                    $options=$this->subcategory->query("SELECT subcategories.id FROM subcategories WHERE category_id IN (SELECT id FROM categories WHERE menu_id='".$search[1]."')");
+                    /*$options = $this->subcategory->find("all", array(
+                        'fields'=>array('subcategory.id'),
+                        'condition'=>array(
+                            'subcategory.category_id'=>array(
+                                $this->category->find("all",array(
+                                    'fields'=>array('id'),
+                                    'condition'=>array("category.menu_id",array(
+                                        $this->menu->find("all",array(
+                                            'fields'=>array('id'),
+                                            'condition'=>array('menu.id'=>array($search[1]))
+                                        ))
+                                    ))
+                                ))
+                            )
+                        )
+                    ));*/
+                    
+                    break;
+                case "category":
+                    echo "category";
+                    break;
+                case "subcategory":
+                    echo "subcategory";
+                    break;
+            }
+        }
+
         $this->paginate = array(
             'limit' => 4,
             'order' => array('product.id' => 'asc')
         );
-        $this->set('products', $this->Paginator->paginate());
+        
+
+        $arr=array();
+        foreach ($options as $v){
+            $arr[]=$v["subcategories"]["id"];
+        }
+        $this->set('products', $this->Paginator->paginate(array("Product.id IN "=>$arr)));
     }
 
     /**
