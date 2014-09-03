@@ -1,5 +1,5 @@
 <?php echo $this->element("headernavigation"); ?> 
-<div class="products index">
+<div>
     <h2><?php echo __('Products'); ?></h2>
     <table cellpadding="0" cellspacing="0">
         <thead>
