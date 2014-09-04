@@ -21,6 +21,9 @@ class MenusController extends AppController {
  * @return void
  */
 	public function index() {
+            
+                $this->layout = "admin";
+            
 		$this->Menu->recursive = 0;
 		$this->set('menus', $this->Paginator->paginate());
 	}

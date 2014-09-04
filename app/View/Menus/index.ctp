@@ -1,4 +1,7 @@
-<div class="menus index">
+<?php echo $this->element('admin/header'); ?>
+<?php echo $this->element("admin/leftnav"); ?> 
+
+<div id="content">
 	<h2><?php echo __('Menus'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<thead>
@@ -36,6 +39,4 @@
 	?>
 	</div>
 </div>
-<div class="actions">
-<?php echo $this->element("sidenav"); ?>>
-</div>
+
