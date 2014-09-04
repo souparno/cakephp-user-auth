@@ -2,7 +2,9 @@
 <div class="header-top">
     <div class="wrap"> 
         <ul class="f-list1">
-            <li><img src="images/2.png"/><span class="f-text1">Free &nbsp;Shipping&nbsp; Nationwide</span>
+            <li>
+               <?php echo $this->Html->image('images/2.png'); ?>
+                <span class="f-text1">Free &nbsp;Shipping&nbsp; Nationwide</span>
                 <div class="clear"></div>			
             </li>
         </ul>
