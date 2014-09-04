@@ -3,7 +3,9 @@
     <div class="wrap">
         <div class="header-bottom-left">
             <div class="logo">
-                <a href="index.html"><img src="images/logo.png" alt=""/></a>
+                <a href="index.html">
+                 <?php echo $this->Html->image('images/logo.png'); ?>
+                </a>
             </div>
             <div class="menu">
                 <ul class="megamenu skyblue">
@@ -31,6 +33,7 @@
                         
                         <div class="megapanel">
                             <div class="row">
+                                
                                 <div class="col1">
                                     <?php 
                                      foreach ($categories as $category): 
@@ -55,6 +58,7 @@
                                      endforeach;
                                     ?>
                                 </div>
+                                
                             </div>
                         </div>
                       <?php } ?>
@@ -90,3 +94,4 @@
     </div>
 </div>
 <!--Bottom Header End-->
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>

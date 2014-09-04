@@ -1,5 +1,6 @@
 <?php echo $this->element('headertop'); ?>
 <?php echo $this->element("headerbottom"); ?> 
+<?php echo $this->element("slider"); ?> 
 <div class="main">
     <div class="wrap">
         <div class="section group">

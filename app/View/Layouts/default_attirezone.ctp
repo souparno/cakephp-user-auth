@@ -7,7 +7,6 @@
 	</title>
 	<?php
 
-                echo $this->Html->css('cake.generic');
 		echo $this->Html->css('attirezone/style');
                 echo $this->Html->css('attirezone/form');
                 echo $this->Html->css('attirezone/css/style');
@@ -34,7 +33,7 @@
 
 <link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
 
-<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+
    
 </head>
 <body>
@@ -42,21 +41,6 @@
 
     <?php echo $this->Session->flash(); ?>
     <?php echo $this->fetch('content'); ?>
-
-    
-    
-    
-    
-    
-		<script>
-			$(function() {
-
-				$( '#mi-slider' ).catslider();
-
-			});
-		</script>
-                
-                
-                <?php echo $this->element('sql_dump'); ?>
+    <?php echo $this->element('sql_dump'); ?>
                 
 </body>
