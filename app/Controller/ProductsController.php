@@ -36,39 +36,29 @@ class ProductsController extends AppController {
 
         $this->layout = "default_attirezone";
 
-        $this->loadModel("menu");
-        $this->loadModel("category");
-        $this->loadModel("subcategory");
+        $this->set("menus", $this->Product->Subcategory->Category->Menu->find('all'));
+        $this->set("categories", $this->Product->Subcategory->Category->find("all"));
+        $this->set("subcategories", $this->Product->Subcategory->find("all"));
 
 
-
-        $this->set("menus", $this->menu->find("all"));
-        $this->set("categories", $this->category->find("all"));
-        $this->set("subcategories", $this->subcategory->find("all"));
-
-        $options = array();
+        $subcategories=array();
 
         if ($param) {
             $search = split("-", $param);
             switch ($search[0]) {
                 case "menu":
-                    $options=$this->subcategory->query("SELECT subcategories.id FROM subcategories WHERE category_id IN (SELECT id FROM categories WHERE menu_id='".$search[1]."')");
-                    /*$options = $this->subcategory->find("all", array(
-                        'fields'=>array('subcategory.id'),
-                        'condition'=>array(
-                            'subcategory.category_id'=>array(
-                                $this->category->find("all",array(
-                                    'fields'=>array('id'),
-                                    'condition'=>array("category.menu_id",array(
-                                        $this->menu->find("all",array(
-                                            'fields'=>array('id'),
-                                            'condition'=>array('menu.id'=>array($search[1]))
-                                        ))
-                                    ))
-                                ))
-                            )
-                        )
-                    ));*/
+                    
+                    
+                    $categories=$this->Product->Subcategory->Category->find("list",array(
+                        'fields'=>array('Category.id'),
+                        'conditions'=>array('Category.menu_id'=>$search[1])
+                    ));
+                    
+                    $subcategories=  $this->Product->Subcategory->find("list",array(
+                        'fields'=>array('Subcategory.id'),
+                        'conditions'=>array('Subcategory.category_id'=>$categories)
+                    ));
+
                     
                     break;
                 case "category":
@@ -82,15 +72,11 @@ class ProductsController extends AppController {
 
         $this->paginate = array(
             'limit' => 4,
+            'conditions'=>array('Product.subcategory_id'=> $subcategories),
             'order' => array('product.id' => 'asc')
         );
-        
 
-        $arr=array();
-        foreach ($options as $v){
-            $arr[]=$v["subcategories"]["id"];
-        }
-        $this->set('products', $this->Paginator->paginate(array("Product.id IN "=>$arr)));
+        $this->set('products', $this->paginate());
     }
 
     /**

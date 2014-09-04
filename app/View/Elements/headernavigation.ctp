@@ -33,23 +33,23 @@
                      <?php 
                       foreach ($menus as $menu){ ?>
                     <li>
-                        <?php echo $this->Html->link($menu['menu']['title'],array('controller' => 'products','action' => 'index', 'menu-'.$menu['menu']['id']), array('class' => 'color4')); ?>
+                        <?php echo $this->Html->link($menu['Menu']['title'],array('controller' => 'products','action' => 'index', 'menu-'.$menu['Menu']['id']), array('class' => 'color4')); ?>
                         <div class="megapanel">
                             <div class="row">
                                 <div class="col1">
                                     <?php 
                                      foreach ($categories as $category): 
-                                     if($category['category']['menu_id'] == $menu["menu"]["id"]):
+                                     if($category['Category']['menu_id'] == $menu["Menu"]["id"]):
                                     ?> 
                                     <div class="h_nav">
                                         <h4>
-                                            <?php echo $this->Html->link($category['category']['title'],array('controller' => 'products','action' => 'index', 'category-'.$category['category']['id']), array('class' => 'color4')); ?>
+                                            <?php echo $this->Html->link($category['Category']['title'],array('controller' => 'products','action' => 'index', 'category-'.$category['Category']['id']), array('class' => 'color4')); ?>
                                         </h4>
                                         <ul>
                                             <?php foreach($subcategories as $subcategory) {
-                                                if($subcategory['subcategory']['category_id'] == $category["category"]["id"]){
+                                                if($subcategory['Subcategory']['category_id'] == $category["Category"]["id"]){
                                                 ?>
-                                            <li><?php echo $this->Html->link($subcategory['subcategory']['title'],array('controller' => 'products','action' => 'index', 'subcategory-'.$subcategory['subcategory']['id']), array('class' => 'color4')); ?></li>
+                                            <li><?php echo $this->Html->link($subcategory['Subcategory']['title'],array('controller' => 'products','action' => 'index', 'Subcategory-'.$subcategory['Subcategory']['id']), array('class' => 'color4')); ?></li>
                                             <?php
                                                 }
                                             }?>
