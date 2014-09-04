@@ -1,6 +1,5 @@
-<?php
-
-echo $this->element("headernavigation"); ?> 
+<?php echo $this->element('headertop'); ?>
+<?php echo $this->element("headerbottom"); ?> 
 <div class="main">
     <div class="wrap">
         <div class="section group">
