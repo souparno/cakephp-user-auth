@@ -93,5 +93,3 @@
         <div class="clear"></div>
     </div>
 </div>
-<!--Bottom Header End-->
-<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>

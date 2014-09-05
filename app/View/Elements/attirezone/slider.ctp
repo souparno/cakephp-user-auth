@@ -18,11 +18,3 @@
     <div class="slidePrev"><span></span></div>
     <div class="slideNext"><span></span></div>
 </div>
-<!--/slider -->
-<script>
-    $(function() {
-
-        $('#mi-slider').catslider();
-
-    });
-</script>

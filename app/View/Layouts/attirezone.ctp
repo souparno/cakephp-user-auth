@@ -1,11 +1,29 @@
-<!DOCTYPE html>
-<html>
+<html style="" class=" js cssanimations csstransforms">
     <head>
-
-        <title>
-
-        </title>
-
+        <title>Home :: attirezone.com</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <link media="all" type="text/css" rel="stylesheet" href="/css/attirezone/style.css">
+        <link media="all" type="text/css" rel="stylesheet" href="/css/attirezone/form.css">
+        <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Exo+2">
+        <link href="/css/attirezone/css/style.css" type="text/css" rel="stylesheet">
+        <script src="/js/attirezone/jquery1.min.js" type="text/javascript"></script>
+        <!-- start menu -->
+        <link media="all" type="text/css" rel="stylesheet" href="/css/attirezone/megamenu.css">
+        <script src="/js/attirezone/megamenu.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function() {
+                $(".megamenu").megamenu();
+            });
+        </script>
+        <!--start slider -->
+        <link media="all" href="/css/attirezone/fwslider.css" rel="stylesheet">
+        <script src="/js/attirezone/jquery-ui.min.js"></script>
+        <script src="/js/attirezone/css3-mediaqueries.js"></script>
+        <script src="/js/attirezone/fwslider.js"></script>
+        <script src="/js/attirezone/js/modernizr.custom.63321.js"></script>
+        <!--end slider -->
+        <script src="/js/attirezone/jquery.easydropdown.js"></script>
         <style type="text/css">
             /** Paging **/
             .paging {                
@@ -50,38 +68,8 @@
                 color: #c73e14;
             }
         </style>
-
-
-	<?php
-
-		echo $this->Html->css('attirezone/style');
-                echo $this->Html->css('attirezone/form');
-                echo $this->Html->css('attirezone/css/style');
-                echo $this->Html->css('attirezone/megamenu');
-                echo $this->Html->css('attirezone/fwslider');
-                
-                
-                
-                echo $this->Html->script('attirezone/jquery1.min');
-                echo $this->Html->script('attirezone/megamenu');
-                echo $this->Html->script('attirezone/jquery-ui.min');
-                echo $this->Html->script('attirezone/css3-mediaqueries');
-                echo $this->Html->script('attirezone/fwslider');
-                echo $this->Html->script('attirezone/js/modernizr.custom.56621');
-                echo $this->Html->script('attirezone/jquery.easydropdown');
-                echo $this->Html->script('attirezone/js/jquery.catslider');
-                
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-                
-	?>
-
-
-        <link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
-
-
-
+        <link media="all" type="text/css" rel="stylesheet" href="/css/attirezone/default.css">
+        <link media="all" type="text/css" rel="stylesheet" href="/css/attirezone/nivo-slider.css">
     </head>
     <body>
 
@@ -89,5 +77,20 @@
     <?php echo $this->Session->flash(); ?>
     <?php echo $this->fetch('content'); ?>
     <?php echo $this->element('sql_dump'); ?>
+
+
+
+        <script src="/js/attirezone/jquery.nivo.slider.js"></script>
+        <script src="/js/attirezone/js/jquery.catslider.js"></script>
+        <script>
+            $(window).load(function() {
+                $('#slider').nivoSlider();
+            });
+            $(function() {
+
+                $('#mi-slider').catslider();
+
+            });
+        </script>
 
     </body>
