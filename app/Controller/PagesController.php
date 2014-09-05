@@ -31,8 +31,7 @@ App::uses('AppController', 'Controller');
  * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
 class PagesController extends AppController {
-    
-    
+
     public function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow('home');
@@ -51,7 +50,7 @@ class PagesController extends AppController {
      *
      * @var array
      */
-    public $uses = array('Menu', 'Category', 'Subcategory', 'Imageslider','Product');
+    public $uses = array('Menu', 'Category', 'Subcategory', 'Imageslider', 'Product');
 
     /**
      * Layout name
@@ -73,7 +72,8 @@ class PagesController extends AppController {
         $this->set("menus", $this->Menu->find('all'));
         $this->set("categories", $this->Category->find("all"));
         $this->set("subcategories", $this->Subcategory->find("all"));
-        
+        $this->set("param", $param);
+
 
         $subcategories = array();
 
@@ -83,15 +83,22 @@ class PagesController extends AppController {
                 case "menu":
 
 
-                    $categories = $this->Product->Subcategory->Category->find("list", array(
+                    $categories = $this->Category->find("list", array(
                         'fields' => array('Category.id'),
                         'conditions' => array('Category.menu_id' => $search[1])
                     ));
 
-                    $subcategories = $this->Product->Subcategory->find("list", array(
+                    $subcategories = $this->Subcategory->find("list", array(
                         'fields' => array('Subcategory.id'),
                         'conditions' => array('Subcategory.category_id' => $categories)
                     ));
+
+
+                    $this->paginate = array(
+                        'limit' => 9,
+                        'conditions' => array('Product.subcategory_id' => $subcategories),
+                        'order' => array('product.id' => 'asc')
+                    );
 
 
                     break;
@@ -104,11 +111,28 @@ class PagesController extends AppController {
             }
         }
 
-        $this->paginate = array(
-            'limit' => 9,
-            'conditions' => array('Product.subcategory_id' => $subcategories),
-            'order' => array('product.id' => 'asc')
-        );
+
+        if ($this->request->data) {
+            $price1 = split("-", $this->request->data['price'][0]);
+            $price2 = split("-", $this->request->data['price'][count($this->request->data['price']) - 1]);
+            $min_price = $price1[0];
+            $max_price = $price2[1];
+
+
+            $this->paginate = array(
+                'limit' => 9,
+                'conditions' => array(
+                    'Product.subcategory_id' => $subcategories,
+                    'AND' => array(
+                        'Product.inrprice >=' => $min_price,
+                        'AND' => array(
+                            'Product.inrprice <=' => $max_price,
+                        )
+                    )
+                ),
+                'order' => array('product.id' => 'asc')
+            );
+        }
 
         $this->set('products', $this->paginate('Product'));
     }
