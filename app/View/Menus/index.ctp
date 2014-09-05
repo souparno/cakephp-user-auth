@@ -1,15 +1,10 @@
-<?php
-
-echo $this->element('admin/header'); ?>
+<?php echo $this->element('admin/header'); ?>
 <?php echo $this->element("admin/leftnav"); ?> 
 
 <!--main content start-->
 <section id="main-content">
     <section class="wrapper">
         <h2><?php echo __('Menus'); ?></h2>
-
-
-
         <div class="row mt">
             <div class="col-md-12">
                 <div class="content-panel">
@@ -35,12 +30,6 @@ echo $this->element('admin/header'); ?>
 <?php endforeach; ?>
                         </tbody>
                     </table>
-
-
-
-
-
-
                 </div><!-- /content-panel -->
             </div><!-- /col-md-12 -->
         </div><!-- /row -->

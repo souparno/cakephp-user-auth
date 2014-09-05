@@ -1,2 +1,2 @@
-1409901624
-a:2:{s:4:"name";a:5:{s:32:"bdfd36636335249b3b2903c9fdf5c144";s:19:"`db_cakephpexample`";s:32:"49d9207adfce6df1dd3ee8c30c434414";s:7:"`menus`";s:32:"1fca740733997f1ebbedacfc7678592a";s:11:"`Menu`.`id`";s:32:"ac9a462b13e2369de879d1bbb429fda2";s:14:"`Menu`.`title`";s:32:"d2bc458620afb092c61ab4383b7475e0";s:6:"`Menu`";}s:6:"fields";a:2:{s:32:"6951b00086569ae676137a67cbda4b6a";a:2:{i:0;s:11:"`Menu`.`id`";i:1;s:14:"`Menu`.`title`";}s:32:"7051af0927d72b3fc737f4e14cda25c7";a:1:{i:0;s:11:"`Menu`.`id`";}}}
+1409903308
+a:1:{s:4:"name";a:2:{s:32:"bdfd36636335249b3b2903c9fdf5c144";s:19:"`db_cakephpexample`";s:32:"f94a437fb7858e092079378f93ef2c71";s:7:"`users`";}}
