@@ -38,7 +38,7 @@ class AppController extends Controller {
     // sessions support
     // authorization for login and logut redirect
     public $components = array(
-        'DebugKit.Toolbar',
+        //'DebugKit.Toolbar',
         'Session',
         'Auth' => array(
             'loginRedirect' => array('controller' => 'users', 'action' => 'index'),
@@ -49,6 +49,7 @@ class AppController extends Controller {
 
     // only allow the login controllers only
     public function beforeFilter() {
+        $this->Auth->allow('home');
         $this->Auth->allow('login');
     }
 

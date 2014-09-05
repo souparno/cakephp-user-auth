@@ -12,7 +12,7 @@ class Imageslider extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'image_title' => array(
+		'title' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -22,7 +22,7 @@ class Imageslider extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'image_link' => array(
+		'link' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',

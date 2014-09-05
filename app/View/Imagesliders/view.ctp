@@ -6,9 +6,9 @@
 			<?php echo h($imageslider['Imageslider']['id']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Image Title'); ?></dt>
+		<dt><?php echo __('Title'); ?></dt>
 		<dd>
-			<?php echo h($imageslider['Imageslider']['image_title']); ?>
+			<?php echo h($imageslider['Imageslider']['title']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Imageurl'); ?></dt>
@@ -16,9 +16,9 @@
 			<?php echo h($imageslider['Imageslider']['imageurl']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Image Link'); ?></dt>
+		<dt><?php echo __('Link'); ?></dt>
 		<dd>
-			<?php echo h($imageslider['Imageslider']['image_link']); ?>
+			<?php echo h($imageslider['Imageslider']['link']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('OrderId'); ?></dt>

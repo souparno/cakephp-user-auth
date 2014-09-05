@@ -4,9 +4,9 @@
 		<legend><?php echo __('Edit Imageslider'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('image_title');
+		echo $this->Form->input('title');
 		echo $this->Form->input('imageurl');
-		echo $this->Form->input('image_link');
+		echo $this->Form->input('link');
 		echo $this->Form->input('orderId');
 	?>
 	</fieldset>

@@ -4,9 +4,9 @@
 	<thead>
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('image_title'); ?></th>
+			<th><?php echo $this->Paginator->sort('title'); ?></th>
 			<th><?php echo $this->Paginator->sort('imageurl'); ?></th>
-			<th><?php echo $this->Paginator->sort('image_link'); ?></th>
+			<th><?php echo $this->Paginator->sort('link'); ?></th>
 			<th><?php echo $this->Paginator->sort('orderId'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
@@ -15,9 +15,9 @@
 	<?php foreach ($imagesliders as $imageslider): ?>
 	<tr>
 		<td><?php echo h($imageslider['Imageslider']['id']); ?>&nbsp;</td>
-		<td><?php echo h($imageslider['Imageslider']['image_title']); ?>&nbsp;</td>
+		<td><?php echo h($imageslider['Imageslider']['title']); ?>&nbsp;</td>
 		<td><?php echo h($imageslider['Imageslider']['imageurl']); ?>&nbsp;</td>
-		<td><?php echo h($imageslider['Imageslider']['image_link']); ?>&nbsp;</td>
+		<td><?php echo h($imageslider['Imageslider']['link']); ?>&nbsp;</td>
 		<td><?php echo h($imageslider['Imageslider']['orderId']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $imageslider['Imageslider']['id'])); ?>
