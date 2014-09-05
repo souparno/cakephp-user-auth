@@ -1,6 +1,4 @@
-<?php
-
-echo $this->element('attirezone/headertop'); ?>
+<?php echo $this->element('attirezone/headertop'); ?>
 <?php echo $this->element("attirezone/headerbottom"); ?>
 <div class="mens">    
     <div class="main">
@@ -26,25 +24,24 @@ echo $this->element('attirezone/headertop'); ?>
                     </div>
                     <div class="clear"></div>
                 </div>
-
-
-                <!--Boxes Start-->
-                <?php $start=0;   while(TRUE){ ?>
+                
+                
+                <!--Breadcrumb End-->
                 <div class="top-box">
-                     <?php  for($i=$start;$i<=($start+2);$i++){   if($i>=count($products)) break; ?>
                     <div class="col_1_of_3 span_1_of_3"> 
                         <a href="productdetails.html">
                             <div class="inner_content clearfix">
                                 <div class="product_image">
-                                    <img alt="" src="<?php echo '/img/images/'.$products[$i]['Product']['image1']  ?>">
+                                    <img alt="" src="images/BNR - 000009.jpg">
                                 </div>
+                                <div class="sale-box"><span class="on_sale title_shop">New</span></div>	
                                 <div class="price">
                                     <div class="cart-left">
-                                        <p class="title"><?php echo $products[$i]['Subcategory']['title']; ?></p>
+                                        <p class="title">Bangladesh sada kalo</p>
                                         <p style="float:right; margin-right:5px;" class="title">BNR-000009</p>
                                     </div>
                                     <div class="price1">
-                                        <span class="actual">Rs.<?php echo $products[$i]['Product']['inrprice']  ?> / $ <?php echo $products[$i]['Product']['usdprice'] ?></span>
+                                        <span class="actual">Rs.9950 / $162.48</span>
                                         <div class="cart-right"> </div>
                                     </div>
                                     <div class="clear"></div>
@@ -52,22 +49,62 @@ echo $this->element('attirezone/headertop'); ?>
                             </div>
                         </a>
                     </div>
-                    <?php }   ?>
+                    <div class="col_1_of_3 span_1_of_3"> 
+                        <a href="productdetails.html">
+                            <div class="inner_content clearfix">
+                                <div class="product_image">
+                                    <img alt="" src="images/BNR - 000010.jpg">
+                                </div>
+                                <div class="sale-box"><span class="on_sale title_shop">New</span></div>	
+                                <div class="price">
+                                    <div class="cart-left">
+                                        <p class="title">Bangladesh sada kalo</p>
+                                        <p style="float:right; margin-right:5px;" class="title">BNR-000010</p>
+                                    </div>
+                                    <div class="price1">
+                                        <span class="actual">Rs.2350 / $38.37</span>
+                                        <div class="cart-right"> </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>				
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col_1_of_3 span_1_of_3"> 
+                        <a href="productdetails.html">
+                            <div class="inner_content clearfix">
+                                <div class="product_image">
+                                    <img alt="" src="images/BNR - 000012.jpg">
+                                </div>
+                                <div class="sale-box"><span class="on_sale title_shop">New</span></div>	
+                                <div class="price">
+                                    <div class="cart-left">
+                                        <p class="title">Bangladesh sada kalo</p>
+                                        <p style="float:right; margin-right:5px;" class="title">BNR-000012</p>
+                                    </div>
+                                    <div class="price1">
+                                        <span class="actual">Rs.4550 / $74.3</span>
+                                        <div class="cart-right"> </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>				
+                            </div>
+                        </a>
+                    </div>
                     <div class="clear"></div>
                 </div>
-                <?php $start=$start+3;   if($start>=count($products))    break; } ?>
-                <!--Boxes End-->
-
-
-
-
-
-
-
-
-
-
-
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
             </div>
             <div class="rsidebar span_1_of_left">
                 <section class="sky-form">
