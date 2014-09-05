@@ -38143,3 +38143,179 @@ Stack Trace:
 #1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest))
 #2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2014-09-06 04:52:20 Error: [MissingActionException] Action TestsController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'images',
+)
+Request URL: /tests/images/BNR%20-%20000002.jpg
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-06 04:52:20 Error: [MissingActionException] Action TestsController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'images',
+)
+Request URL: /tests/images/BNR%20-%20000003.JPG
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-06 04:52:21 Error: [MissingActionException] Action TestsController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'images',
+)
+Request URL: /tests/images/BNR%20-%20000003.JPG
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-06 04:52:22 Error: [MissingActionException] Action TestsController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'images',
+)
+Request URL: /tests/images/BNR%20-%20000003.JPG
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-06 04:52:23 Error: [MissingActionException] Action TestsController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'images',
+)
+Request URL: /tests/images/BNR%20-%20000003.JPG
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-06 04:52:25 Error: [MissingActionException] Action TestsController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'images',
+)
+Request URL: /tests/images/BNR%20-%20000003.JPG
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-06 04:52:25 Error: [MissingActionException] Action TestsController::undefined() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'undefined',
+)
+Request URL: /tests/undefined
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-06 04:52:29 Error: [MissingActionException] Action TestsController::undefined() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'undefined',
+)
+Request URL: /tests/undefined
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-06 04:52:31 Error: [MissingActionException] Action TestsController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'images',
+)
+Request URL: /tests/images/BNR%20-%20000003.JPG
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-06 04:52:31 Error: [MissingActionException] Action TestsController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'images',
+)
+Request URL: /tests/images/BNR%20-%20000003.JPG
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-06 04:52:35 Error: [MissingActionException] Action TestsController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'images',
+)
+Request URL: /tests/images/BNR%20-%20000003.JPG
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-06 04:52:35 Error: [MissingActionException] Action TestsController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'images',
+)
+Request URL: /tests/images/BNR%20-%20000003.JPG
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-06 04:52:38 Error: [MissingActionException] Action TestsController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'images',
+)
+Request URL: /tests/images/BNR%20-%20000003.JPG
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-06 04:52:41 Error: [MissingActionException] Action TestsController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'images',
+)
+Request URL: /tests/images/BNR%20-%20000003.JPG
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-06 04:52:41 Error: [MissingActionException] Action TestsController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'images',
+)
+Request URL: /tests/images/BNR%20-%20000003.JPG
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-06 04:52:43 Error: [MissingActionException] Action TestsController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'images',
+)
+Request URL: /tests/images/BNR%20-%20000003.JPG
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest))
+#2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
