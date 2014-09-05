@@ -51,7 +51,7 @@ class PagesController extends AppController {
      *
      * @var array
      */
-    public $uses = array('Product','Menu', 'Category', 'Subcategory', 'Imageslider');
+    public $uses = array('Menu', 'Category', 'Subcategory', 'Imageslider','Product');
 
     /**
      * Layout name
@@ -110,7 +110,7 @@ class PagesController extends AppController {
             'order' => array('product.id' => 'asc')
         );
 
-        $this->set('products', $this->paginate());
+        $this->set('products', $this->paginate('Product'));
     }
 
 }
