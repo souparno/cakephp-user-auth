@@ -1,93 +1,88 @@
-        <!-- MENU SECTION -->
-       <div id="left" >
-            <div class="media user-media well-small">
-                <a class="user-link" href="#">
-                    <img class="media-object img-thumbnail user-img" alt="User Picture" src="img/user.gif" />
-                </a>
-                <br />
-                <div class="media-body">
-                    <h5 class="media-heading"> Astik Singh</h5>
-                    <ul class="list-unstyled user-info">
-                        
-                        <li>
-                             <a style="width: 10px;height: 12px;" href="profile.php">Profile</a> 
-                           
-                        </li>
-                       
-                    </ul>
-                </div>
-                <br />
-            </div>
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+              
+              	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+              	  <h5 class="centered">Marcel Newman</h5>
+              	  	
+                  <li class="mt">
+                      <a href="index.html">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
 
-            <ul id="menu" class="collapse">
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-desktop"></i>
+                          <span>UI Elements</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="general.html">General</a></li>
+                          <li><a  href="buttons.html">Buttons</a></li>
+                          <li><a  href="panels.html">Panels</a></li>
+                      </ul>
+                  </li>
 
-                
-                <li class="panel active">
-                    <a href="index.php" >
-                        <i class="icon-table"></i> Dashboard                     
-                    </a>                   
-                </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-cogs"></i>
+                          <span>Components</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="calendar.html">Calendar</a></li>
+                          <li><a  href="gallery.html">Gallery</a></li>
+                          <li><a  href="todo_list.html">Todo List</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-book"></i>
+                          <span>Extra Pages</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="blank.html">Blank Page</a></li>
+                          <li><a  href="login.html">Login</a></li>
+                          <li><a  href="lock_screen.html">Lock Screen</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-tasks"></i>
+                          <span>Forms</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="form_component.html">Form Components</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a class="active" href="javascript:;" >
+                          <i class="fa fa-th"></i>
+                          <span>Data Tables</span>
+                      </a>
+                      <ul class="sub">
+                          <li class="active"><a  href="basic_table.html">Basic Table</a></li>
+                          <li><a  href="responsive_table.html">Responsive Table</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class=" fa fa-bar-chart-o"></i>
+                          <span>Charts</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="morris.html">Morris</a></li>
+                          <li><a  href="chartjs.html">Chartjs</a></li>
+                      </ul>
+                  </li>
 
-
-
-                <li class="panel ">
-                    <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav">
-                        <i class="icon-tasks"> </i> User     
-	   
-                        <span class="pull-right">
-                          <i class="icon-angle-left"></i>
-                        </span>
-                    </a>
-                    <ul class="collapse" id="component-nav">
-                       
-                        <li class=""><a href="adduser.php"><i class="icon-angle-right"></i> Add User </a></li>
-                        <li class=""><a href="manageuser.php"><i class="icon-angle-right"></i> Manage User </a></li>
-                         <li class=""><a href="password.php"><i class="icon-angle-right"></i> Change Password </a></li>
-                    </ul>
-                </li>
-                <li class="panel ">
-                    <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed" data-target="#form-nav">
-                        <i class="icon-pencil"></i> Products
-	   
-                        <span class="pull-right">
-                            <i class="icon-angle-left"></i>
-                        </span>
-                    </a>
-                    <ul class="collapse" id="form-nav">
-                    <li class=""><a href="addcategory.php"><i class="icon-angle-right"></i> Add Category </a></li>
-                    <li class=""><a href="addsubcategory.php"><i class="icon-angle-right"></i> Add sub Category </a></li>
-                        <li class=""><a href="addproduct.php"><i class="icon-angle-right"></i> Add Products </a></li>
-                        <li class=""><a href="newarrival.php"><i class="icon-angle-right"></i> New Arrival </a></li>
-                        <li class=""><a href="viewproduct.php"><i class="icon-angle-right"></i> View Products </a></li>
-                    </ul>
-                </li>
-
-                <li class="panel">
-                    <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#pagesr-nav">
-                        <i class="icon-table"></i> Buyers
-	   
-                        <span class="pull-right">
-                            <i class="icon-angle-left"></i>
-                        </span>
-                    </a>
-                    <ul class="collapse" id="pagesr-nav">
-                        <li><a href="managebuyer.php"><i class="icon-angle-right"></i> Manage Buyers </a></li>
-                        <li><a href="viewbuyer.php"><i class="icon-angle-right"></i> View Buyers </a></li>
-                    </ul>
-                </li>
-                <li class="panel">
-                    <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#chart-nav">
-                        <i class="icon-bar-chart"></i> Slider
-	   
-                        <span class="pull-right">
-                            <i class="icon-angle-left"></i>
-                        </span>
-                    </a>
-                    <ul class="collapse" id="chart-nav">
-                        <li><a href="slider.php"><i class="icon-angle-right"></i> Add Slider </a></li>
-                    </ul>
-                </li>
-            </ul>
-
-        </div>
-        <!--END MENU SECTION -->
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
