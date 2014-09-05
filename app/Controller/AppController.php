@@ -41,8 +41,8 @@ class AppController extends Controller {
         //'DebugKit.Toolbar',
         'Session',
         'Auth' => array(
-            'loginRedirect' => array('controller' => 'users', 'action' => 'index'),
-            'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
+            'loginRedirect' => array('controller' => 'menus', 'action' => 'index'),
+            'logoutRedirect' => array('controller' => 'pages', 'action' => 'home'),
             'authError' => 'You must be logged in to view this page.',
             'loginError' => 'Invalid Username or Password entered, please try again.'
     ));
