@@ -14,7 +14,7 @@
                       foreach ($menus as $menu){ ?>
                     <li>
                         <?php 
-                        echo $this->Html->link($menu['Menu']['title'],array('controller' => 'products','action' => 'index', 'menu-'.$menu['Menu']['id']), array('class' => 'color4'));
+                        echo $this->Html->link($menu['Menu']['title'],array('controller' => 'pages','action' => 'search', 'menu-'.$menu['Menu']['id']), array('class' => 'color4'));
                         
                          $flag=0;
                          

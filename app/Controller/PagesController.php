@@ -31,6 +31,13 @@ App::uses('AppController', 'Controller');
  * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
 class PagesController extends AppController {
+    
+    
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('home');
+        $this->Auth->allow('search');
+    }
 
     /**
      * Controller name
@@ -44,23 +51,66 @@ class PagesController extends AppController {
      *
      * @var array
      */
-    public $uses = array('Menu','Category','Subcategory','Imageslider');
+    public $uses = array('Product','Menu', 'Category', 'Subcategory', 'Imageslider');
 
     /**
      * Layout name
      *
      * @var array
      */
-    public $layout = 'default_attirezone';
-    
+    public $layout = 'attirezone';
 
     public function home() {
-    
+
         $this->set("menus", $this->Menu->find('all'));
         $this->set("categories", $this->Category->find("all"));
         $this->set("subcategories", $this->Subcategory->find("all"));
-        $this->set("imagesliders",$this->Imageslider->find("all"));
+        $this->set("imagesliders", $this->Imageslider->find("all"));
+    }
+
+    public function search($param = NULL) {
+        $this->set("products", $this->Product->find("all"));
+        $this->set("menus", $this->Menu->find('all'));
+        $this->set("categories", $this->Category->find("all"));
+        $this->set("subcategories", $this->Subcategory->find("all"));
         
+
+        $subcategories = array();
+
+        if ($param) {
+            $search = split("-", $param);
+            switch ($search[0]) {
+                case "menu":
+
+
+                    $categories = $this->Product->Subcategory->Category->find("list", array(
+                        'fields' => array('Category.id'),
+                        'conditions' => array('Category.menu_id' => $search[1])
+                    ));
+
+                    $subcategories = $this->Product->Subcategory->find("list", array(
+                        'fields' => array('Subcategory.id'),
+                        'conditions' => array('Subcategory.category_id' => $categories)
+                    ));
+
+
+                    break;
+                case "category":
+                    echo "category";
+                    break;
+                case "subcategory":
+                    echo "subcategory";
+                    break;
+            }
+        }
+
+        $this->paginate = array(
+            'limit' => 9,
+            'conditions' => array('Product.subcategory_id' => $subcategories),
+            'order' => array('product.id' => 'asc')
+        );
+
+        $this->set('products', $this->paginate());
     }
 
 }

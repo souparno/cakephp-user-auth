@@ -34,7 +34,7 @@ class ProductsController extends AppController {
      */
     public function index($param = NULL) {
 
-        $this->layout = "default_attirezone";
+        $this->layout = "attirezone";
 
         $this->set("menus", $this->Product->Subcategory->Category->Menu->find('all'));
         $this->set("categories", $this->Product->Subcategory->Category->find("all"));
