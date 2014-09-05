@@ -11,12 +11,18 @@ App::uses('AppController', 'Controller');
 class ProductsController extends AppController {
 
     /**
+     * Layout name
+     *
+     * @var array
+     */
+    public $layout = 'admin';
+
+    /**
      * Components
      *
      * @var array
      */
     public $components = array('Paginator');
-
 
     /**
      * index method
@@ -31,25 +37,25 @@ class ProductsController extends AppController {
         $this->set("subcategories", $this->Product->Subcategory->find("all"));
 
 
-        $subcategories=array();
+        $subcategories = array();
 
         if ($param) {
             $search = split("-", $param);
             switch ($search[0]) {
                 case "menu":
-                    
-                    
-                    $categories=$this->Product->Subcategory->Category->find("list",array(
-                        'fields'=>array('Category.id'),
-                        'conditions'=>array('Category.menu_id'=>$search[1])
-                    ));
-                    
-                    $subcategories=  $this->Product->Subcategory->find("list",array(
-                        'fields'=>array('Subcategory.id'),
-                        'conditions'=>array('Subcategory.category_id'=>$categories)
+
+
+                    $categories = $this->Product->Subcategory->Category->find("list", array(
+                        'fields' => array('Category.id'),
+                        'conditions' => array('Category.menu_id' => $search[1])
                     ));
 
-                    
+                    $subcategories = $this->Product->Subcategory->find("list", array(
+                        'fields' => array('Subcategory.id'),
+                        'conditions' => array('Subcategory.category_id' => $categories)
+                    ));
+
+
                     break;
                 case "category":
                     echo "category";
@@ -62,7 +68,7 @@ class ProductsController extends AppController {
 
         $this->paginate = array(
             'limit' => 4,
-            'conditions'=>array('Product.subcategory_id'=> $subcategories),
+            'conditions' => array('Product.subcategory_id' => $subcategories),
             'order' => array('product.id' => 'asc')
         );
 

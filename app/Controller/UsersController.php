@@ -10,6 +10,15 @@ App::uses('AppController', 'Controller');
  */
 class UsersController extends AppController {
 
+    /**
+     * Layout name
+     *
+     * @var array
+     */
+    public $layout = 'admin';
+    
+    
+    
     public $paginate = array(
         'limit' => 25,
         'conditions' => array('status' => '1'),
