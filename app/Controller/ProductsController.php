@@ -31,11 +31,10 @@ class ProductsController extends AppController {
      */
     public function index() {
         $this->Product->recursive = 0;
-        $this->paginate=array(
+        $this->paginate = array(
             'limit' => 10,
         );
-        $this->set('products', $this->Paginator->paginate());    
-        
+        $this->set('products', $this->Paginator->paginate());
     }
 
     /**

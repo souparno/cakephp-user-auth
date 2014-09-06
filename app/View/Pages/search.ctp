@@ -32,7 +32,7 @@
                         <a href="/pages/productdetails/<?php echo $products[$i]['Product']['id']  ?>">
                             <div class="inner_content clearfix">
                                 <div class="product_image">
-                                    <img alt="" src="<?php echo '/img/images/'.$products[$i]['Product']['image1']  ?>">
+                                    <img alt="" src="<?php echo '/img/images/'.$products[$i]['Product']['image1_small']  ?>">
                                 </div>
                                 <div class="price">
                                     <div class="cart-left">

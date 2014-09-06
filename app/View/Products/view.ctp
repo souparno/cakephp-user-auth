@@ -1,63 +1,81 @@
 <div class="products view">
-    <h2><?php echo __('Product'); ?></h2>
-    <dl>
-        <dt><?php echo __('Id'); ?></dt>
-        <dd>
+<h2><?php echo __('Product'); ?></h2>
+	<dl>
+		<dt><?php echo __('Id'); ?></dt>
+		<dd>
 			<?php echo h($product['Product']['id']); ?>
-            &nbsp;
-        </dd>
-        <dt><?php echo __('Subcategory'); ?></dt>
-        <dd>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Subcategory'); ?></dt>
+		<dd>
 			<?php echo $this->Html->link($product['Subcategory']['title'], array('controller' => 'subcategories', 'action' => 'view', $product['Subcategory']['id'])); ?>
-            &nbsp;
-        </dd>
-        <dt><?php echo __('Code'); ?></dt>
-        <dd>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Code'); ?></dt>
+		<dd>
 			<?php echo h($product['Product']['code']); ?>
-            &nbsp;
-        </dd>
-        <dt><?php echo __('Inrprice'); ?></dt>
-        <dd>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Inrprice'); ?></dt>
+		<dd>
 			<?php echo h($product['Product']['inrprice']); ?>
-            &nbsp;
-        </dd>
-        <dt><?php echo __('Usdprice'); ?></dt>
-        <dd>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Usdprice'); ?></dt>
+		<dd>
 			<?php echo h($product['Product']['usdprice']); ?>
-            &nbsp;
-        </dd>
-        <dt><?php echo __('Features'); ?></dt>
-        <dd>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Features'); ?></dt>
+		<dd>
 			<?php echo h($product['Product']['features']); ?>
-            &nbsp;
-        </dd>
-        <dt><?php echo __('Description'); ?></dt>
-        <dd>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Description'); ?></dt>
+		<dd>
 			<?php echo h($product['Product']['description']); ?>
-            &nbsp;
-        </dd>
-        <dt><?php echo __('Image1'); ?></dt>
-        <dd>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Image1'); ?></dt>
+		<dd>
 			<?php echo h($product['Product']['image1']); ?>
-            &nbsp;
-        </dd>
-        <dt><?php echo __('Image1 Small'); ?></dt>
-        <dd>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Image1 Small'); ?></dt>
+		<dd>
 			<?php echo h($product['Product']['image1_small']); ?>
-            &nbsp;
-        </dd>
-        <dt><?php echo __('Created'); ?></dt>
-        <dd>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Created'); ?></dt>
+		<dd>
 			<?php echo h($product['Product']['created']); ?>
-            &nbsp;
-        </dd>
-        <dt><?php echo __('Modified'); ?></dt>
-        <dd>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Modified'); ?></dt>
+		<dd>
 			<?php echo h($product['Product']['modified']); ?>
-            &nbsp;
-        </dd>
-    </dl>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Newattraction'); ?></dt>
+		<dd>
+			<?php echo h($product['Product']['newattraction']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Featured'); ?></dt>
+		<dd>
+			<?php echo h($product['Product']['featured']); ?>
+			&nbsp;
+		</dd>
+	</dl>
 </div>
 <div class="actions">
-<?php echo $this->element("sidenav"); ?>
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+		<li><?php echo $this->Html->link(__('Edit Product'), array('action' => 'edit', $product['Product']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Delete Product'), array('action' => 'delete', $product['Product']['id']), array(), __('Are you sure you want to delete # %s?', $product['Product']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('List Products'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Product'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Subcategories'), array('controller' => 'subcategories', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Subcategory'), array('controller' => 'subcategories', 'action' => 'add')); ?> </li>
+	</ul>
 </div>

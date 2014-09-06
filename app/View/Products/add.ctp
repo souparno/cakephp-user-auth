@@ -11,10 +11,18 @@
 		echo $this->Form->input('description');
 		echo $this->Form->input('image1');
 		echo $this->Form->input('image1_small');
+		echo $this->Form->input('newattraction');
+		echo $this->Form->input('featured');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
 <div class="actions">
-<?php echo $this->element("sidenav"); ?>
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+
+		<li><?php echo $this->Html->link(__('List Products'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List Subcategories'), array('controller' => 'subcategories', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Subcategory'), array('controller' => 'subcategories', 'action' => 'add')); ?> </li>
+	</ul>
 </div>

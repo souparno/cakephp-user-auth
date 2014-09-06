@@ -18,7 +18,7 @@
                 <th><?php echo $this->Paginator->sort('usdprice'); ?></th>
                 <th><?php echo $this->Paginator->sort('features'); ?></th>
                 <th><?php echo $this->Paginator->sort('description'); ?></th>
-                <th><?php echo $this->Paginator->sort('image1'); ?></th>
+                <th><?php echo $this->Paginator->sort('image1_small'); ?></th>
                 <th class="actions"><?php echo __('Actions'); ?></th>
             </tr>
                         </thead>
@@ -34,7 +34,7 @@
                 <td><?php echo h($product['Product']['usdprice']); ?>&nbsp;</td>
                 <td><?php echo h($product['Product']['features']); ?>&nbsp;</td>
                 <td><?php echo h($product['Product']['description']); ?>&nbsp;</td>
-                <td><?php echo $this->Html->image("images/".h($product['Product']['image1']), array('height'=>'auto','width'=>'100px')); ?>  &nbsp;</td>
+                <td><?php echo $this->Html->image("images/".h($product['Product']['image1_small']), array('height'=>'auto','width'=>'100px')); ?>  &nbsp;</td>
                 <td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $product['Product']['id']),array('class'=>'btn btn-success btn-xs')); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $product['Product']['id']),array('class'=>'btn btn-primary btn-xs')); ?>
