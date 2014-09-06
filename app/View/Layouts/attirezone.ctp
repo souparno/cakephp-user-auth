@@ -92,5 +92,5 @@
 
             });
         </script>
-
+        <script src="/js/attirezone/cloudzoom/cloud-zoom.1.0.2.min.js"></script>
     </body>
