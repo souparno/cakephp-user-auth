@@ -39,7 +39,7 @@
                                 <div class="price">
                                     <div class="cart-left">
                                         <p class="title"><?php echo $products[$i]['Subcategory']['title']; ?></p>
-                                        <p style="float:right; margin-right:5px;" class="title">BNR-000009</p>
+                                        <p style="float:right; margin-right:5px;" class="title"><?php echo $products[$i]['Product']['code'] ?></p>
                                     </div>
                                     <div class="price1">
                                         <span class="actual">Rs.<?php echo $products[$i]['Product']['inrprice']  ?> / $ <?php echo $products[$i]['Product']['usdprice'] ?></span>

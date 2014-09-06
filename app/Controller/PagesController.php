@@ -138,10 +138,21 @@ class PagesController extends AppController {
         $this->set('products', $this->paginate('Product'));
     }
     
-    public function productdetails(){
+    public function productdetails($productID = NULL){
         $this->set("menus", $this->Menu->find('all'));
         $this->set("categories", $this->Category->find("all"));
         $this->set("subcategories", $this->Subcategory->find("all"));
+        
+        $product=$this->Product->find("all",array(
+            'conditions'=>array(                
+                'OR'=>array(
+                    'Product.id'=>$productID,
+                    'Product.code'=>$productID
+                )
+            )
+        ));
+        
+        $this->set('product',$product);
         
     }
 
