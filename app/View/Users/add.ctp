@@ -1,32 +1,35 @@
-<?php
-
-$role_id=0; foreach ($roles as $id=>$role): $role_id=$id; endforeach; ?>
-
-<div class="users form">
-<?php echo $this->Form->create('User'); ?>
-    <fieldset>
-        <legend><?php echo __('Add User'); ?></legend>
-	<?php
-		echo $this->Form->input('username');
-		echo $this->Form->input('password');
-		echo $this->Form->input('email');
-		echo $this->Form->input('role_id',array('type'=>'hidden', 'value'=>$role_id));
-		echo $this->Form->input('companyname');
-		echo $this->Form->input('country_id');
-		echo $this->Form->input('city');
-		echo $this->Form->input('phonenumber');
-	?>
-    </fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->element('attirezone/headertop'); ?>
+<?php echo $this->element("attirezone/headerbottom"); ?>
+<div class="register_account">
+    <div class="wrap">
+        <h4 class="title">Create an Account</h4>
+        <form method="POST">
+            <div class="col_1_of_2 span_1_of_2">
+                <div><input type="text" id="UserUsername" maxlength="128" name="data[User][username]" placeholder="User Name" ></div>
+                <div><input type="text" required="required" id="UserCompanyname" name="data[User][companyname]" placeholder="Company Name"></div>
+                <div><input type="text" id="UserEmail" maxlength="128" name="data[User][email]" placeholder="Email"></div>
+                <div>
+                    <input type="text" id="UserPassword" name="data[User][password]" placeholder="Password">
+                </div>
+            </div>
+            <div class="col_1_of_2 span_1_of_2">	
+                <div><input type="text" id="UserPassword" name="data[User][address]" placeholder="Address"></div>
+                <div>
+                    <select required="required" id="UserCountryId" name="data[User][country_id]">
+                      <?php foreach ($countries as $key => $value) {?>
+                        <option value='<?php echo $key ?>'><?php echo $value; ?></option>
+                      <?php } ?>
+                    </select>
+                </div>
+                <input type="text" required="required" id="UserCity" rows="6" cols="30" name="data[User][city]" placeholder="City"/>
+                <div>
+                    <input type="text" placeholder="Phone Number" required="required" id="UserPhonenumber" rows="6" cols="30" name="data[User][phonenumber]">
+                </div>
+            </div>
+            <input type="hidden" value="<?php echo $roles[0]['Role']['id'] ?>"name="data[User][role_id]"/>
+            <button class="grey">Submit</button>
+            <div class="clear"></div>
+        </form>
+    </div>
 </div>
-<div class="actions">
-    <h3><?php echo __('Actions'); ?></h3>
-    <ul>
-
-        <li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?></li>
-        <li><?php echo $this->Html->link(__('List Roles'), array('controller' => 'roles', 'action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('New Role'), array('controller' => 'roles', 'action' => 'add')); ?> </li>
-        <li><?php echo $this->Html->link(__('List Countries'), array('controller' => 'countries', 'action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('New Country'), array('controller' => 'countries', 'action' => 'add')); ?> </li>
-    </ul>
-</div>
+<?php echo $this->element("attirezone/footer"); ?>     

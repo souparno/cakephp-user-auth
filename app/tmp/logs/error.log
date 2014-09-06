@@ -41380,3 +41380,95 @@ Stack Trace:
 #1 /var/www/cakephp.local/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #2 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2014-09-06 17:38:57 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/cakephp.local/app/Controller/UsersController.php, line 83]
+2014-09-06 17:38:57 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/cakeph...', 83)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/cakeph...', 83, Array)
+#2 /var/www/cakephp.local/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/cakeph...', 83, Array)
+#3 /var/www/cakephp.local/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-06 17:54:16 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/cakephp.local/app/Controller/UsersController.php, line 78]
+2014-09-06 17:54:16 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/cakephp.local/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/cakeph...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/cakeph...', 78, Array)
+#2 /var/www/cakephp.local/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/cakeph...', 78, Array)
+#3 /var/www/cakephp.local/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-06 20:22:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/default.css
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-06 20:22:36 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/nivo-slider.css
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-06 20:22:39 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nivo.slider.js
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-06 20:23:07 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/nivo-slider.css
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-06 20:23:07 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/default.css
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-06 20:23:08 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nivo.slider.js
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-06 20:23:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/attirezone/loading.gif
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-06 20:23:24 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/l-r-arrows.png
+Stack Trace:
+#0 /var/www/cakephp.local/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
