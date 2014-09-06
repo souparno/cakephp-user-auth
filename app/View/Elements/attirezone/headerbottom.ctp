@@ -41,13 +41,13 @@
                                     ?> 
                                     <div class="h_nav">
                                         <h4>
-                                            <?php echo $this->Html->link($category['Category']['title'],array('controller' => 'products','action' => 'index', 'category-'.$category['Category']['id']), array('class' => 'color4')); ?>
+                                            <?php echo $this->Html->link($category['Category']['title'],array('controller' => 'pages','action' => 'search', 'category-'.$category['Category']['id']), array('class' => 'color4')); ?>
                                         </h4>
                                         <ul>
                                             <?php foreach($subcategories as $subcategory) {
                                                 if($subcategory['Subcategory']['category_id'] == $category["Category"]["id"]){
                                                 ?>
-                                            <li><?php echo $this->Html->link($subcategory['Subcategory']['title'],array('controller' => 'products','action' => 'index', 'Subcategory-'.$subcategory['Subcategory']['id']), array('class' => 'color4')); ?></li>
+                                            <li><?php echo $this->Html->link($subcategory['Subcategory']['title'],array('controller' => 'pages','action' => 'search', 'subcategory-'.$subcategory['Subcategory']['id']), array('class' => 'color4')); ?></li>
                                             <?php
                                                 }
                                             }?>

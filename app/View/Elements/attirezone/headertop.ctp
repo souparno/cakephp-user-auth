@@ -10,11 +10,22 @@
         </ul>
         <div class="cssmenu">
             <ul>
-                <li class="active"><a href="login.html">Account</a></li> |
+                <li class="active"><a href="">Account</a></li> |
                 <li><a href="checkout.html">Wishlist</a></li> |
                 <li><a href="checkout.html">Checkout</a></li> |
-                <li><a href="login.html">Log In</a></li> |
-                <li><a href="register.html">Sign Up</a></li>
+                <?php 
+                 if($this->Session->check('Auth.User')):
+                     ?>
+                <li><a href="/users/logout">Log Out</a></li> |
+                <?php
+                 else:
+                     ?>
+                <li><a href="/users/login">Log in</a></li> |
+                <?php
+                 endif;                     
+                ?>
+                
+                <li><a href="/users/add">Sign Up</a></li>
             </ul>
         </div>
         <div class="clear"></div>

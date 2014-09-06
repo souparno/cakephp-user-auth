@@ -144,7 +144,7 @@ class UsersController extends AppController {
         return $this->redirect(array('action' => 'index'));
     }
 
-    public function login() {
+    public function login($product_id=NULL) {
 
         $this->set("menus", $this->Menu->find('all'));
         $this->set("categories", $this->Category->find("all"));
@@ -152,14 +152,21 @@ class UsersController extends AppController {
 
 
         //if already logged-in, redirect
-        if ($this->Session->check('Auth.User')) {
+        /*if ($this->Session->check('Auth.User')) {
             $this->redirect(array('action' => 'index'));
-        }
+        }*/
         // if we get the post information, try to authenticate
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
-                //$this->Session->setFlash(__('Welcome, ' . $this->Auth->user('username')));
-                $this->redirect($this->Auth->redirectUrl());
+                //$this->redirect($this->Auth->redirectUrl());
+                
+                if(!$product_id):
+                    $this->redirect ("/");
+                else:
+                    $this->redirect("/pages/buyproduct/".$this->Auth->user('id')."/".$product_id);
+                endif;
+                
+                
             } else {
                 $this->Session->setFlash(__('Invalid username or password'));
             }

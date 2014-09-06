@@ -78,10 +78,21 @@ class PagesController extends AppController {
 
         $subcategories = array();
 
+        $menuname = "";
+
         if ($param) {
             $search = split("-", $param);
             switch ($search[0]) {
                 case "menu":
+
+                    $menuname = $this->Menu->find("all", array(
+                        'fields' => array('Menu.title'),
+                        'conditions' => array(
+                            'Menu.id' => array($search[1])
+                        )
+                    ));
+
+                    $menuname = $menuname[0]['Menu']['title'];
 
 
                     $categories = $this->Category->find("list", array(
@@ -104,10 +115,48 @@ class PagesController extends AppController {
 
                     break;
                 case "category":
-                    echo "category";
+
+                    $menuname = $this->Category->find("all", array(
+                        'fields' => array('Category.title'),
+                        'conditions' => array(
+                            'Category.id' => $search[1]
+                        )
+                    ));
+
+                    $menuname = $menuname[0]['Category']['title'];
+
+                    $subcategories = $this->Subcategory->find("list", array(
+                        'fields' => array('Subcategory.id'),
+                        'conditions' => array('Subcategory.category_id' => $search[1])
+                    ));
+
+
+                    $this->paginate = array(
+                        'limit' => 9,
+                        'conditions' => array('Product.subcategory_id' => $subcategories),
+                        'order' => array('product.id' => 'asc')
+                    );
+
+
                     break;
                 case "subcategory":
-                    echo "subcategory";
+
+
+                    $menuname = $this->Subcategory->find("all", array(
+                        'fields' => array('Subcategory.title'),
+                        'conditions' => array('Subcategory.id' => $search[1])
+                    ));
+
+                    $menuname = $menuname[0]['Subcategory']['title'];
+
+                    $subcategories = $search[1];
+
+                    $this->paginate = array(
+                        'limit' => 9,
+                        'conditions' => array('Product.subcategory_id' => $subcategories),
+                        'order' => array('product.id' => 'asc')
+                    );
+
                     break;
             }
         }
@@ -136,24 +185,39 @@ class PagesController extends AppController {
         }
 
         $this->set('products', $this->paginate('Product'));
+        $this->set('menuname', $menuname);
     }
-    
-    public function productdetails($productID = NULL){
+
+    public function productdetails($productID = NULL) {
         $this->set("menus", $this->Menu->find('all'));
         $this->set("categories", $this->Category->find("all"));
         $this->set("subcategories", $this->Subcategory->find("all"));
-        
-        $product=$this->Product->find("all",array(
-            'conditions'=>array(                
-                'OR'=>array(
-                    'Product.id'=>$productID,
-                    'Product.code'=>$productID
+
+        $product = $this->Product->find("all", array(
+            'conditions' => array(
+                'OR' => array(
+                    'Product.id' => $productID,
+                    'Product.code' => $productID
                 )
             )
         ));
-        
-        $this->set('product',$product);
-        
+
+        $this->set('product', $product);
+
+
+        if ($this->request->data("Buy")) {
+
+            if ($this->Session->check('Auth.User')) :
+                $this->buyproduct($this->Auth->user('id'), $productID);
+            else :
+                $this->redirect("/users/login/".$productID);
+            endif;
+        }
+    }
+    
+    public function buyproduct($user_id,$productId){
+        //$this->Session->setFlash($user_id."bought ".$productId);
+        $this->redirect("/");       
     }
 
 }

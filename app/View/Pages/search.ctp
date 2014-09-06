@@ -2,11 +2,9 @@
 <?php echo $this->element("attirezone/headerbottom"); ?>
 <div class="mens">    
     <div class="main">
-        <div class="wrap">
-            <!--Breadcrumb Start-->
-            <ul class="breadcrumb breadcrumb__t"><a href="#" class="home">Cotton</a> / <a href="#">Tant</a> / Lorem ipsum dolor sit amet</ul>
+        <div class="wrap">            
             <div class="cont span_2_of_3">
-                <h2 class="head">cotton sarees</h2>
+                <h2 class="head"><?php echo $menuname; ?></h2>
                 <div class="mens-toolbar">
                     <p>
 	<?php
@@ -31,7 +29,7 @@
                 <div class="top-box">
                      <?php  for($i=$start;$i<=($start+2);$i++){   if($i>=count($products)) break; ?>
                     <div class="col_1_of_3 span_1_of_3"> 
-                        <a href="productdetails.html">
+                        <a href="/pages/productdetails/<?php echo $products[$i]['Product']['id']  ?>">
                             <div class="inner_content clearfix">
                                 <div class="product_image">
                                     <img alt="" src="<?php echo '/img/images/'.$products[$i]['Product']['image1']  ?>">

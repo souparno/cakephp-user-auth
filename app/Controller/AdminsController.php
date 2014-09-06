@@ -9,7 +9,7 @@ App::uses('AppController', 'Controller');
  * @property PaginatorComponent $Paginator
  */
 class AdminsController extends AppController {
-    
+
     /**
      * This controller does not use a model
      *
@@ -27,6 +27,7 @@ class AdminsController extends AppController {
     public function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow('add');
+        $this->Auth->allow('login');
     }
 
     /**
@@ -120,6 +121,17 @@ class AdminsController extends AppController {
             $this->Session->setFlash(__('The user could not be deleted. Please, try again.'));
         }
         return $this->redirect(array('action' => 'index'));
+    }
+
+    public function login() {
+        if ($this->request->is('post')) {
+            if ($this->Auth->login()) {
+                //$this->redirect($this->Auth->redirectUrl());
+                $this->redirect("/menus");
+            } else {
+                $this->Session->setFlash(__('Invalid username or password'));
+            }
+        }
     }
 
 }

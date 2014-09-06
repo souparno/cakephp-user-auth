@@ -15,11 +15,16 @@
                     <h3 class="m_3"><?php echo $product[0]['Subcategory']['title'] ?></h3>
                     <p class="m_5">Rs.<?php echo $product[0]['Product']['inrprice']  ?> / $ <?php echo $product[0]['Product']['usdprice'] ?></p>
                     <div class="btn_form">
-                        <form method="POST">
-                                <input name="Buy" type="submit" value="Buy" title="">
+                        <form>
+                            <input type="submit" value="Add To Cart" title="">
                         </form>
+                        <div class="btn_form">
+                            <form>
+                                <input type="submit" value="Buy" title="">
+                            </form>
+                        </div>
                     </div>
-                    <span class="m_link"><a href="#">save to wishlist</a> </span>
+                    <span class="m_link"><a href="#">login to save in wishlist</a> </span>
                     <p class="m_text2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit </p>
                 </div>
                 <div class="clear"></div>
@@ -66,8 +71,26 @@
                     <p class="m_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                 </div>
             </div>
-            
-            <div class="clear"></div>
+            <div class="rsingle span_1_of_single">
+                <section class="sky-form">
+                    <h4>Price</h4>
+                    <div style="overflow: hidden; padding: 0px; width: 278px;" class="row row1 scroll-pane">
+
+
+                        <div class="jspContainer" style="width: 278px; height: 200px;"><div class="jspPane" style="padding: 0px; top: 0px; left: 0px; width: 278px;"><div style="width: 278px; height: 200px;" class="jspContainer"><div style="padding: 20px; width: 231px; top: 0px;" class="jspPane"><div class="col col-4">
+                                            <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Rs 1000 - Rs 2000</label>
+                                        </div><div class="col col-4">
+                                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 2000 - Rs 3000</label>
+                                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 3000 - Rs 4000</label>
+                                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 4000 - Rs 5000</label>
+                                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 5000 - Rs 10000</label>
+                                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 10000 - Rs 15000</label>
+                                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 15000 - Rs 20000</label>
+                                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 20000 - Rs 30000</label>
+                                        </div></div><div class="jspVerticalBar"><div class="jspCap jspCapTop"></div><div style="height: 200px;" class="jspTrack"><div style="height: 143px;" class="jspDrag"><div class="jspDragTop"></div><div class="jspDragBottom"></div></div></div><div class="jspCap jspCapBottom"></div></div></div></div></div></div>
+                </section>
+                <script src="/js/attirezone/jquery.easydropdown.js"></script>
+            </div><div class="clear"></div>
         </div>
         <div class="clear"></div>
     </div>
