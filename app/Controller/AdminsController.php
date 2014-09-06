@@ -8,7 +8,14 @@ App::uses('AppController', 'Controller');
  * @property User $User
  * @property PaginatorComponent $Paginator
  */
-class UsersController extends AppController {
+class AdminsController extends AppController {
+    
+    /**
+     * This controller does not use a model
+     *
+     * @var array
+     */
+    public $uses = array('User');
 
     /**
      * Components
@@ -62,11 +69,7 @@ class UsersController extends AppController {
                 $this->Session->setFlash(__('The user could not be saved. Please, try again.'));
             }
         }
-        $roles = $this->User->Role->find('list',array(
-            'conditions'=>array(
-                'Role.title'=>'USER'
-            )
-        ));
+        $roles = $this->User->Role->find('list');
         $countries = $this->User->Country->find('list');
         $this->set(compact('roles', 'countries'));
     }

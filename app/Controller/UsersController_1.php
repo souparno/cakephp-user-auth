@@ -11,15 +11,51 @@ App::uses('AppController', 'Controller');
 class UsersController extends AppController {
 
     /**
-     * Components
+     * Layout name
      *
      * @var array
      */
-    public $components = array('Paginator');
+    public $layout = 'admin';
+    public $paginate = array(
+        'limit' => 25,
+        'conditions' => array('status' => '1'),
+        'order' => array('User.username' => 'asc')
+    );
 
     public function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow('add');
+    }
+
+    public function login() {
+
+        $this->layout = 'attirezone';
+
+        $this->loadModel("Menu");
+        $this->loadModel("Category");
+        $this->loadModel("Subcategory");
+        
+        $this->set("menus", $this->Menu->find('all'));
+        $this->set("categories", $this->Category->find("all"));
+        $this->set("subcategories", $this->Subcategory->find("all"));
+
+        //if already logged-in, redirect
+        if ($this->Session->check('Auth.User')) {
+            $this->redirect(array('action' => 'index'));
+        }
+        // if we get the post information, try to authenticate
+        if ($this->request->is('post')) {
+            if ($this->Auth->login()) {
+                //$this->Session->setFlash(__('Welcome, ' . $this->Auth->user('username')));
+                $this->redirect($this->Auth->redirectUrl());
+            } else {
+                $this->Session->setFlash(__('Invalid username or password'));
+            }
+        }
+    }
+
+    public function logout() {
+        $this->redirect($this->Auth->logout());
     }
 
     /**
@@ -28,8 +64,12 @@ class UsersController extends AppController {
      * @return void
      */
     public function index() {
-        $this->User->recursive = 0;
-        $this->set('users', $this->Paginator->paginate());
+        $this->paginate = array(
+            'limit' => 6,
+            'order' => array('User.username' => 'asc')
+        );
+        $users = $this->paginate('User');
+        $this->set(compact('users'));
     }
 
     /**
@@ -62,13 +102,8 @@ class UsersController extends AppController {
                 $this->Session->setFlash(__('The user could not be saved. Please, try again.'));
             }
         }
-        $roles = $this->User->Role->find('list',array(
-            'conditions'=>array(
-                'Role.title'=>'USER'
-            )
-        ));
-        $countries = $this->User->Country->find('list');
-        $this->set(compact('roles', 'countries'));
+        $roles = $this->User->Role->find('list');
+        $this->set(compact('roles'));
     }
 
     /**
@@ -94,8 +129,7 @@ class UsersController extends AppController {
             $this->request->data = $this->User->find('first', $options);
         }
         $roles = $this->User->Role->find('list');
-        $countries = $this->User->Country->find('list');
-        $this->set(compact('roles', 'countries'));
+        $this->set(compact('roles'));
     }
 
     /**

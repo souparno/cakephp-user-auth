@@ -1,11 +1,11 @@
 <?php
-App::uses('UsersController', 'Controller');
+App::uses('CountriesController', 'Controller');
 
 /**
- * UsersController Test Case
+ * CountriesController Test Case
  *
  */
-class UsersControllerTest extends ControllerTestCase {
+class CountriesControllerTest extends ControllerTestCase {
 
 /**
  * Fixtures
@@ -13,9 +13,9 @@ class UsersControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
+		'app.country',
 		'app.user',
-		'app.role',
-		'app.country'
+		'app.role'
 	);
 
 /**
