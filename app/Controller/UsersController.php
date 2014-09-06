@@ -16,9 +16,6 @@ class UsersController extends AppController {
      * @var array
      */
     public $layout = 'admin';
-    
-    
-    
     public $paginate = array(
         'limit' => 25,
         'conditions' => array('status' => '1'),
@@ -31,6 +28,17 @@ class UsersController extends AppController {
     }
 
     public function login() {
+
+        $this->layout = 'attirezone';
+
+        $this->loadModel("Menu");
+        $this->loadModel("Category");
+        $this->loadModel("Subcategory");
+        
+        $this->set("menus", $this->Menu->find('all'));
+        $this->set("categories", $this->Category->find("all"));
+        $this->set("subcategories", $this->Subcategory->find("all"));
+
         //if already logged-in, redirect
         if ($this->Session->check('Auth.User')) {
             $this->redirect(array('action' => 'index'));
@@ -38,7 +46,7 @@ class UsersController extends AppController {
         // if we get the post information, try to authenticate
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
-                $this->Session->setFlash(__('Welcome, ' . $this->Auth->user('username')));
+                //$this->Session->setFlash(__('Welcome, ' . $this->Auth->user('username')));
                 $this->redirect($this->Auth->redirectUrl());
             } else {
                 $this->Session->setFlash(__('Invalid username or password'));

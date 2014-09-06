@@ -49,8 +49,6 @@ class AppController extends Controller {
 
     // only allow the login controllers only
     public function beforeFilter() {
-        $this->Auth->allow('home');
-        $this->Auth->allow('search');
     }
 
     public function isAuthorized($user) {

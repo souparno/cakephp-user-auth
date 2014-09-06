@@ -3,13 +3,13 @@
     <div class="wrap">
         <div class="header-bottom-left">
             <div class="logo">
-                <a href="index.html">
+                <a href="/">
                  <?php echo $this->Html->image('images/logo.png'); ?>
                 </a>
             </div>
             <div class="menu">
                 <ul class="megamenu skyblue">
-                    <li class="active grid"><a href="index.html">Home</a></li>
+                    <li class="active grid"><a href="/">Home</a></li>
                      <?php 
                       foreach ($menus as $menu){ ?>
                     <li>
