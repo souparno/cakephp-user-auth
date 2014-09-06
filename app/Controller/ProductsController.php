@@ -29,50 +29,13 @@ class ProductsController extends AppController {
      *
      * @return void
      */
-    public function index($param = NULL) {
-
-
-        $this->set("menus", $this->Product->Subcategory->Category->Menu->find('all'));
-        $this->set("categories", $this->Product->Subcategory->Category->find("all"));
-        $this->set("subcategories", $this->Product->Subcategory->find("all"));
-
-
-        $subcategories = array();
-
-        if ($param) {
-            $search = split("-", $param);
-            switch ($search[0]) {
-                case "menu":
-
-
-                    $categories = $this->Product->Subcategory->Category->find("list", array(
-                        'fields' => array('Category.id'),
-                        'conditions' => array('Category.menu_id' => $search[1])
-                    ));
-
-                    $subcategories = $this->Product->Subcategory->find("list", array(
-                        'fields' => array('Subcategory.id'),
-                        'conditions' => array('Subcategory.category_id' => $categories)
-                    ));
-
-
-                    break;
-                case "category":
-                    echo "category";
-                    break;
-                case "subcategory":
-                    echo "subcategory";
-                    break;
-            }
-        }
-
-        $this->paginate = array(
-            'limit' => 4,
-            'conditions' => array('Product.subcategory_id' => $subcategories),
-            'order' => array('product.id' => 'asc')
+    public function index() {
+        $this->Product->recursive = 0;
+        $this->paginate=array(
+            'limit' => 10,
         );
-
-        $this->set('products', $this->paginate());
+        $this->set('products', $this->Paginator->paginate());    
+        
     }
 
     /**
