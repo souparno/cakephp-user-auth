@@ -1,6 +1,4 @@
-<?php
-
-echo $this->element('attirezone/headertop'); ?>
+<?php echo $this->element('attirezone/headertop'); ?>
 <?php echo $this->element("attirezone/headerbottom"); ?>
 <div class="mens">    
     <div class="main">

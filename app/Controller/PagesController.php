@@ -36,6 +36,7 @@ class PagesController extends AppController {
         parent::beforeFilter();
         $this->Auth->allow('home');
         $this->Auth->allow('search');
+        $this->Auth->allow('productdetails');
     }
 
     /**
@@ -135,6 +136,13 @@ class PagesController extends AppController {
         }
 
         $this->set('products', $this->paginate('Product'));
+    }
+    
+    public function productdetails(){
+        $this->set("menus", $this->Menu->find('all'));
+        $this->set("categories", $this->Category->find("all"));
+        $this->set("subcategories", $this->Subcategory->find("all"));
+        
     }
 
 }
