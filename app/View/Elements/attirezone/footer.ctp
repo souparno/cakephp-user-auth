@@ -95,10 +95,10 @@
             </div>
             <div class="f-list2">
                 <ul>
-                    <li class="active"><a href="about.html">About Us</a></li> |
-                    <li><a href="delivery.html">Delivery & Returns</a></li> |
-                    <li><a href="termsandconditions.html">Terms & Conditions</a></li> |
-                    <li><a href="contact.html">Contact Us</a></li> 
+                    <li class="active"><a href="/pages/about">About Us</a></li> |
+                    <li><a href="#">Delivery & Returns</a></li> |
+                    <li><a href="/pages/termsandcondition">Terms & Conditions</a></li> |
+                    <li><a href="/pages/contactus">Contact Us</a></li> 
                 </ul>
             </div>
             <div class="clear"></div>

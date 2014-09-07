@@ -37,6 +37,9 @@ class PagesController extends AppController {
         $this->Auth->allow('home');
         $this->Auth->allow('search');
         $this->Auth->allow('productdetails');
+        $this->Auth->allow('about');
+        $this->Auth->allow('contactus');
+        $this->Auth->allow('termsandcondition');
     }
 
     /**
@@ -62,10 +65,44 @@ class PagesController extends AppController {
 
     public function home() {
 
-        $this->set("menus", $this->Menu->find('all'));
+        $menus = $this->Menu->find('all');
+
+        $this->set("menus", $menus);
         $this->set("categories", $this->Category->find("all"));
         $this->set("subcategories", $this->Subcategory->find("all"));
         $this->set("imagesliders", $this->Imageslider->find("all"));
+
+
+        $newproducts = array();
+
+        foreach ($menus as $menu) {
+
+            $categories = $this->Category->find("list", array(
+                'fields' => array('Category.id'),
+                'conditions' => array('Category.menu_id' => $menu['Menu']['id'])
+            ));
+
+            $subcategories = $this->Subcategory->find("list", array(
+                'fields' => array('Subcategory.id'),
+                'conditions' => array('Subcategory.category_id' => $categories)
+            ));
+
+            $newproducts[$menu['Menu']['title']] = $this->Product->find("all", array(
+                    'conditions' => array('Product.subcategory_id' => $subcategories)
+                ));
+           
+        }
+        
+        
+        var_dump($newproducts);
+
+
+        $featuredproducts = $this->Product->find("all", array(
+            'conditions' => array('Product.featured' => '1')
+        ));
+
+        $this->set("newproducts", $newproducts);
+        $this->set("featuredproducts", $featuredproducts);
     }
 
     public function search($param = NULL) {
@@ -193,6 +230,7 @@ class PagesController extends AppController {
         $this->set("categories", $this->Category->find("all"));
         $this->set("subcategories", $this->Subcategory->find("all"));
 
+        //$this->Product->recursive=3;
         $product = $this->Product->find("all", array(
             'conditions' => array(
                 'OR' => array(
@@ -202,22 +240,49 @@ class PagesController extends AppController {
             )
         ));
 
-        $this->set('product', $product);
+        $menu = $this->Menu->query("SELECT menus.title FROM products "
+                . "JOIN subcategories ON subcategories.id=products.subcategory_id "
+                . "JOIN categories ON categories.id=subcategories.category_id "
+                . "JOIN menus ON menus.id=categories.menu_id "
+                . "WHERE products.id='" . $productID . "' OR products.code='" . $productID . "'");
 
+        $this->set('product', $product);
+        $this->set('menu', $menu);
 
         if ($this->request->data("Buy")) {
 
             if ($this->Session->check('Auth.User')) :
                 $this->buyproduct($this->Auth->user('id'), $productID);
             else :
-                $this->redirect("/users/login/".$productID);
+                $this->redirect("/users/login/" . $productID);
             endif;
         }
     }
-    
-    public function buyproduct($user_id,$productId){
+
+    public function buyproduct($user_id, $productId) {
         //$this->Session->setFlash($user_id."bought ".$productId);
-        $this->redirect("/");       
+        $this->redirect("/");
+    }
+
+    public function about() {
+        $this->set("menus", $this->Menu->find('all'));
+        $this->set("categories", $this->Category->find("all"));
+        $this->set("subcategories", $this->Subcategory->find("all"));
+        $this->set("imagesliders", $this->Imageslider->find("all"));
+    }
+
+    public function contactus() {
+        $this->set("menus", $this->Menu->find('all'));
+        $this->set("categories", $this->Category->find("all"));
+        $this->set("subcategories", $this->Subcategory->find("all"));
+        $this->set("imagesliders", $this->Imageslider->find("all"));
+    }
+
+    public function termsandcondition() {
+        $this->set("menus", $this->Menu->find('all'));
+        $this->set("categories", $this->Category->find("all"));
+        $this->set("subcategories", $this->Subcategory->find("all"));
+        $this->set("imagesliders", $this->Imageslider->find("all"));
     }
 
 }

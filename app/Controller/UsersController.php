@@ -151,7 +151,6 @@ class UsersController extends AppController {
         $this->set("categories", $this->Category->find("all"));
         $this->set("subcategories", $this->Subcategory->find("all"));
 
-
         //if already logged-in, redirect
         /*if ($this->Session->check('Auth.User')) {
             $this->redirect(array('action' => 'index'));
@@ -160,6 +159,7 @@ class UsersController extends AppController {
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
                 //$this->redirect($this->Auth->redirectUrl());
+                
                 
                 if(!$product_id):
                     $this->redirect ("/");

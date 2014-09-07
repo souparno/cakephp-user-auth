@@ -10,6 +10,11 @@
         </ul>
         <div class="cssmenu">
             <ul>
+                <?php 
+                 if($this->Session->check('Auth.User')){
+                     $user=$this->Session->read('Auth'); ?>
+                   <li><a href="">Welcome , <?php echo $user['User']['username']; ?></a></li>  |
+                 <?php } ?>
                 <li class="active"><a href="">Account</a></li> |
                 <li><a href="checkout.html">Wishlist</a></li> |
                 <li><a href="checkout.html">Checkout</a></li> |

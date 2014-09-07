@@ -28,12 +28,12 @@
                           if($flag){
 
                         ?>
-                        
-                        
-                        
+
+
+
                         <div class="megapanel">
                             <div class="row">
-                                
+
                                 <div class="col1">
                                     <?php 
                                      foreach ($categories as $category): 
@@ -58,13 +58,13 @@
                                      endforeach;
                                     ?>
                                 </div>
-                                
+
                             </div>
                         </div>
                       <?php } ?>
                     </li>
                       <?php } ?>
-                    <li><a class="color7" href="about.html">About</a></li>
+                    <li><a class="color7" href="/pages/about">About</a></li>
                 </ul>
             </div>
         </div>

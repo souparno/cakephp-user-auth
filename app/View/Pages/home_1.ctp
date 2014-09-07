@@ -289,23 +289,22 @@
 
             <div class="cont span_2_of_3">
                 <h2 class="head">Featured Products</h2>
-                <!--Boxes Start-->
-                <?php $start=0;   while(TRUE){ ?>
+                
                 <div class="top-box">
-                     <?php  for($i=$start;$i<=($start+2);$i++){   if($i>=count($featuredproducts)) break; ?>
                     <div class="col_1_of_3 span_1_of_3"> 
-                        <a href="/pages/productdetails/<?php echo $featuredproducts[$i]['Product']['id']  ?>">
+                        <a href="productdetails.html">
                             <div class="inner_content clearfix">
                                 <div class="product_image">
-                                    <img alt="" src="<?php echo '/img/images/'.$featuredproducts[$i]['Product']['image1_small']  ?>">
+                                    <img src="/img/images/BNR - 000001.jpg" alt=""/>
                                 </div>
+                                <div class="sale-box"><span class="on_sale title_shop">New</span></div>	
                                 <div class="price">
                                     <div class="cart-left">
-                                        <p class="title"><?php echo $featuredproducts[$i]['Subcategory']['title']; ?></p>
-                                        <p style="float:right; margin-right:5px;" class="title"><?php echo $featuredproducts[$i]['Product']['code'] ?></p>
+                                        <p class="title">Benaras silk</p>
+                                        <p class="title" style="float:right; margin-right:5px;">BNR-000001</p>
                                     </div>
                                     <div class="price1">
-                                        <span class="actual">Rs.<?php echo $featuredproducts[$i]['Product']['inrprice']  ?> / $ <?php echo $featuredproducts[$i]['Product']['usdprice'] ?></span>
+                                        <span class="actual">Rs.12500 / $203.19</span>
                                         <div class="cart-right"> </div>
                                     </div>
                                     <div class="clear"></div>
@@ -313,11 +312,180 @@
                             </div>
                         </a>
                     </div>
-                    <?php }   ?>
+                    <div class="col_1_of_3 span_1_of_3">
+                        <a href="productdetails.html">
+                            <div class="inner_content clearfix">
+                                <div class="product_image">
+                                    <img src="/img/images/BNR - 000002.jpg" alt=""/>
+                                </div>
+                                <div class="price">
+                                    <div class="cart-left">
+                                        <p class="title">Benaras tassar silk</p>
+                                        <p class="title" style="float:right; margin-right:5px;">BNR-000002</p>
+                                    </div>
+                                    <div class="price1">
+                                        <span class="actual">Rs.8500 / $138.17</span>
+                                        <div class="cart-right"> </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>				
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col_1_of_3 span_1_of_3">
+                        <a href="productdetails.html">
+                            <div class="inner_content clearfix">
+                                <div class="product_image">
+                                    <img src="/img/images/BNR - 000003.JPG" alt=""/>
+                                </div>
+                                <!--<div class="sale-box1"><span class="on_sale title_shop">Sale</span></div>	-->
+                                <div class="price">
+                                    <div class="cart-left">
+                                        <p class="title">Benaras tassar silk</p>
+                                        <p class="title" style="float:right; margin-right:5px;">BNR-000003</p>
+                                    </div>
+                                    <div class="price1">
+                                        <span class="actual">Rs.15000 / $243.82</span>
+                                        <div class="cart-right"> </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>				
+                            </div>
+                        </a>
+                    </div>
                     <div class="clear"></div>
-                </div>
-                <?php $start=$start+3;   if($start>=count($featuredproducts))    break; } ?>
-                <!--Boxes End-->	 			    
+                </div>	
+                <div class="top-box">
+                    <div class="col_1_of_3 span_1_of_3">
+                        <a href="productdetails.html">
+                            <div class="inner_content clearfix">
+                                <div class="product_image">
+                                    <img src="/img/images/BNR - 000004.jpg" alt=""/>
+                                </div>
+                                <div class="price">
+                                    <div class="cart-left">
+                                        <p class="title">Benaras tassar silk</p>
+                                        <p class="title" style="float:right; margin-right:5px;">BNR-000004</p>
+                                    </div>
+                                    <div class="price1">
+                                        <span class="actual">Rs.12000 / $195.06</span>
+                                        <div class="cart-right"> </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>				
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col_1_of_3 span_1_of_3">
+                        <a href="productdetails.html">
+                            <div class="inner_content clearfix">
+                                <div class="product_image">
+                                    <img src="/img/images/BNR - 000005.jpg" alt=""/>
+                                </div>
+                                <div class="sale-box"><span class="on_sale title_shop">New</span></div>	
+                                <div class="price">
+                                    <div class="cart-left">
+                                        <p class="title">Benaras tassar silk</p>
+                                        <p class="title" style="float:right; margin-right:5px;">BNR-000005</p>
+                                    </div>
+                                    <div class="price1">
+                                        <span class="actual">Rs.11500 / $186.93</span>
+                                        <div class="cart-right"> </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>				
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col_1_of_3 span_1_of_3">
+                        <a href="productdetails.html">
+                            <div class="inner_content clearfix">
+                                <div class="product_image">
+                                    <img src="/img/images/BNR - 000006.jpg" alt=""/>
+                                </div>
+                                <div class="price">
+                                    <div class="cart-left">
+                                        <p class="title">Benaras silk</p>
+                                        <p class="title" style="float:right; margin-right:5px;">BNR-000006</p>
+                                    </div>
+                                    <div class="price1">
+                                        <span class="actual">Rs.15000 / $243.82</span>
+                                        <div class="cart-right"> </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>				
+                            </div>
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>	
+                <div class="top-box1">
+                    <div class="col_1_of_3 span_1_of_3">
+                        <a href="productdetails.html">
+                            <div class="inner_content clearfix">
+                                <div class="product_image">
+                                    <img src="/img/images/BNR - 000007.jpg" alt=""/>
+                                </div>
+                                <div class="sale-box"><span class="on_sale title_shop">New</span></div>	
+                                <div class="price">
+                                    <div class="cart-left">
+                                        <p class="title">Benaras cotton silk</p>
+                                        <p class="title" style="float:right; margin-right:5px;">BNR-000007</p>
+                                    </div>
+                                    <div class="price1">
+                                        <span class="actual">Rs.11500 / $186.93</span>
+                                        <div class="cart-right"> </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>				
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col_1_of_3 span_1_of_3">
+                        <a href="productdetails.html">
+                            <div class="inner_content clearfix">
+                                <div class="product_image">
+                                    <img src="/img/images/BNR - 000008.jpg" alt=""/>
+                                </div>
+                                <!--<div class="sale-box1"><span class="on_sale title_shop">Sale</span></div>	-->
+                                <div class="price">
+                                    <div class="cart-left">
+                                        <p class="title">Benaras Silk Tissue</p>
+                                        <p class="title" style="float:right; margin-right:5px;">BNR-000008</p>
+                                    </div>
+                                    <div class="price1">
+                                        <span class="actual">Rs.11500 / $186.93</span>
+                                        <div class="cart-right"> </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>				
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col_1_of_3 span_1_of_3">
+                        <a href="productdetails.html">
+                            <div class="inner_content clearfix">
+                                <div class="product_image">
+                                    <img src="/img/images/BNR - 000009.jpg" alt=""/>
+                                </div>
+                                <div class="sale-box"><span class="on_sale title_shop">New</span></div>	
+                                <div class="price">
+                                    <div class="cart-left">
+                                        <p class="title">Bangladesh sada kalo</p>
+                                        <p class="title" style="float:right; margin-right:5px;">BNR-000009</p>
+                                    </div>
+                                    <div class="price1">
+                                        <span class="actual">Rs.9950 / $161.74</span>
+                                        <div class="cart-right"> </div>
+                                    </div>
+
+                                    <div class="clear"></div>
+                                </div>				
+                            </div>
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>		 			    
             </div>
             <!--right side bar-->
             <div class="rsidebar span_1_of_left">
