@@ -14,7 +14,8 @@
             <div class="clearfix"> </div>
             <div id="mi-slider" class="mi-slider">
                 <ul>
-                    <li><div class="col_1_of_5 span_1_of_5">
+                    <li>
+                        <div class="col_1_of_5 span_1_of_5">
                             <a href="/pages/productdetails/BNR - 000001">
                                 <div class="inner_content_new clearfix">
                                     <div class="product_image">
@@ -37,7 +38,7 @@
                         </div>
                     </li>
                     <li><div class="col_1_of_5 span_1_of_5">
-                            <a href="productdetails.html">
+                            <a href="/pages/productdetails/BNR - 000002">
                                 <div class="inner_content_new clearfix">
                                     <div class="product_image">
                                         <img src="/img/images/BNR - 000002.jpg" alt=""/>
@@ -59,7 +60,7 @@
                         </div>
                     </li>
                     <li><div class="col_1_of_5 span_1_of_5">
-                            <a href="productdetails.html">
+                            <a href="/pages/productdetails/BNR - 000006">
                                 <div class="inner_content_new clearfix">
                                     <div class="product_image">
                                         <img src="/img/images/BNR - 000006.jpg" alt=""/>
@@ -81,7 +82,7 @@
                         </div>
                     </li>
                     <li><div class="col_1_of_5 span_1_of_5">
-                            <a href="productdetails.html">
+                            <a href="pages/productdetails/BNR - 000004">
                                 <div class="inner_content_new clearfix">
                                     <div class="product_image">
                                         <img src="/img/images/BNR - 000004.jpg" alt=""/>
@@ -105,7 +106,7 @@
                 </ul>
                 <ul>
                     <li><div class="col_1_of_5 span_1_of_5">
-                            <a href="productdetails.html">
+                            <a href="pages/productdetails/BNR - 000009">
                                 <div class="inner_content_new clearfix">
                                     <div class="product_image">
                                         <img src="/img/images/BNR - 000009.jpg" alt=""/>
@@ -126,7 +127,7 @@
                             </a>
                         </div></li>
                     <li><div class="col_1_of_5 span_1_of_5">
-                            <a href="productdetails.html">
+                            <a href="/pages/productdetails/BNR - 000010">
                                 <div class="inner_content_new clearfix">
                                     <div class="product_image">
                                         <img src="/img/images/BNR - 000010.jpg" alt=""/>
@@ -147,7 +148,7 @@
                             </a>
                         </div></a></li>
                     <li><div class="col_1_of_5 span_1_of_5">
-                            <a href="productdetails.html">
+                            <a href="pages/productdetails/BNR - 000012">
                                 <div class="inner_content_new clearfix">
                                     <div class="product_image">
                                         <img src="/img/images/BNR - 000012.jpg" alt=""/>
@@ -168,7 +169,7 @@
                             </a>
                         </div></li>
                     <li><div class="col_1_of_5 span_1_of_5">
-                            <a href="productdetails.html">
+                            <a href="/pages/productdetails/BNR - 000023">
                                 <div class="inner_content_new clearfix">
                                     <div class="product_image">
                                         <img src="/img/images/BNR - 000023.jpg" alt=""/>
@@ -191,7 +192,7 @@
                 </ul>
                 <ul>
                     <li><div class="col_1_of_5 span_1_of_5">
-                            <a href="productdetails.html">
+                            <a href="/">
                                 <div class="inner_content_new clearfix">
                                     <div class="product_image">
                                         <img src="/img/images/JNJ - 000001_temp.jpg" alt=""/>
@@ -212,7 +213,7 @@
                             </a>
                         </div></li>
                     <li><div class="col_1_of_5 span_1_of_5">
-                            <a href="productdetails.html">
+                            <a href="/">
                                 <div class="inner_content_new clearfix">
                                     <div class="product_image">
                                         <img src="/img/images/JNJ - 000001_temp.jpg" alt=""/>
@@ -233,7 +234,7 @@
                             </a>
                         </div></li>
                     <li><div class="col_1_of_5 span_1_of_5">
-                            <a href="productdetails.html">
+                            <a href="/">
                                 <div class="inner_content_new clearfix">
                                     <div class="product_image">
                                         <img src="/img/images/JNJ - 000001_temp.jpg" alt=""/>
@@ -254,7 +255,7 @@
                             </a>
                         </div></li>
                     <li><div class="col_1_of_5 span_1_of_5">
-                            <a href="productdetails.html">
+                            <a href="/">
                                 <div class="inner_content_new clearfix">
                                     <div class="product_image">
                                         <img src="/img/images/JNJ - 000001_temp.jpg" alt=""/>

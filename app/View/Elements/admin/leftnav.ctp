@@ -10,6 +10,17 @@ MAIN SIDEBAR MENU
             <li class="sub-menu">
                 <a href="javascript:;" >
                     <i class="fa fa-desktop"></i>
+                    <span>Home image sliders</span>
+                </a>
+                <ul class="sub">
+                    <li><?php echo $this->Html->link(__('List Roles'), array('controller' => 'imagesliders', 'action' => 'index')); ?> </li>
+                    <li><?php echo $this->Html->link(__('New Role'), array('controller' => 'imagesliders', 'action' => 'add')); ?> </li>
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-desktop"></i>
                     <span>Roles</span>
                 </a>
                 <ul class="sub">
@@ -68,6 +79,17 @@ MAIN SIDEBAR MENU
                     <li><?php echo $this->Html->link(__('New Product'), array('controller' => 'products', 'action' => 'add')); ?> </li>
                 </ul>
             </li>
+
+           <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class=" fa fa-bar-chart-o"></i>
+                    <span>Transactions</span>
+                </a>
+                <ul class="sub">
+                    <li><?php echo $this->Html->link(__('Show Transactions'), array('controller' => 'transactions', 'action' => 'index')); ?> </li>
+                </ul>
+            </li>
+
 
         </ul>
         <!-- sidebar menu end-->

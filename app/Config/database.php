@@ -56,7 +56,7 @@
  */
 class DATABASE_CONFIG {
 
-    /*public $default = array(
+    public $default = array(
         'datasource' => 'Database/Mysql',
         'persistent' => false,
         'host' => 'localhost',
@@ -65,9 +65,9 @@ class DATABASE_CONFIG {
         'database' => 'attirezo_db',
         'prefix' => '',
             //'encoding' => 'utf8',
-    );*/
+    );
 
-     public $default = array(
+     /*public $default = array(
       'datasource' => 'Database/Mysql',
       'persistent' => false,
       'host' => 'localhost',
@@ -76,7 +76,7 @@ class DATABASE_CONFIG {
       'database' => 'db_cakephpexample',
       'prefix' => '',
       //'encoding' => 'utf8',
-      );
+      );*/
      
      
      

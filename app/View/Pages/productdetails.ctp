@@ -25,7 +25,7 @@
                     <p class="m_5">Rs.<?php echo $product[0]['Product']['inrprice']  ?> / $ <?php echo $product[0]['Product']['usdprice'] ?></p>
                     <div class="btn_form">
                         <form method="POST">
-                            <input name="Buy" type="submit" value="Buy" title="">
+                            <input name="Buy" type="submit" value="Add To Cart" title="">
                         </form>
                     </div>
                     <span class="m_link"><a href="#">save to wishlist</a> </span>

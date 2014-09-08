@@ -87,7 +87,17 @@
                         </ul>
                     </li>
                 </ul>
-                <ul class="last"><li><a href="#">Cart(0)</a></li></ul>
+                <ul class="last"><li><a href="/pages/cart">Cart(
+                            <?php 
+                            
+                             if($cart=$this->Session->read("Cart"))
+                              echo count($cart);
+                             else
+                               echo "0";  
+                            ?>
+                            
+                            
+                            )</a></li></ul>
             </div>
         </div>
         <div class="clear"></div>

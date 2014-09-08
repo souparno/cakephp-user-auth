@@ -40,6 +40,8 @@ class PagesController extends AppController {
         $this->Auth->allow('about');
         $this->Auth->allow('contactus');
         $this->Auth->allow('termsandcondition');
+        $this->Auth->allow('cart');
+        $this->Auth->allow('checkout');
     }
 
     /**
@@ -54,7 +56,7 @@ class PagesController extends AppController {
      *
      * @var array
      */
-    public $uses = array('Menu', 'Category', 'Subcategory', 'Imageslider', 'Product');
+    public $uses = array('Menu', 'Category', 'Subcategory', 'Imageslider', 'Product', 'User', 'Transaction', 'Transactiondetail');
 
     /**
      * Layout name
@@ -88,13 +90,15 @@ class PagesController extends AppController {
             ));
 
             $newproducts[$menu['Menu']['title']] = $this->Product->find("all", array(
-                    'conditions' => array('Product.subcategory_id' => $subcategories)
-                ));
-           
+                'conditions' => array(
+                    'Product.subcategory_id' => $subcategories,
+                    'AND' => array('newattraction' => '1')
+                )
+            ));
         }
-        
-        
-        var_dump($newproducts);
+
+
+        //var_dump($newproducts);
 
 
         $featuredproducts = $this->Product->find("all", array(
@@ -251,17 +255,116 @@ class PagesController extends AppController {
 
         if ($this->request->data("Buy")) {
 
-            if ($this->Session->check('Auth.User')) :
-                $this->buyproduct($this->Auth->user('id'), $productID);
-            else :
-                $this->redirect("/users/login/" . $productID);
-            endif;
+            /* if ($this->Session->check('Auth.User')) :
+              $this->buyproduct($this->Auth->user('id'), $productID);
+              else :
+              $this->redirect("/users/login/" . $productID);
+              endif; */
+
+            $cart = $this->Session->read("Cart");
+            $cart[] = $productID;
+            $this->Session->write("Cart", $cart);
+
+            $this->redirect("/pages/cart");
         }
     }
 
     public function buyproduct($user_id, $productId) {
         //$this->Session->setFlash($user_id."bought ".$productId);
         $this->redirect("/");
+    }
+
+    public function cart() {
+        $this->set("menus", $this->Menu->find('all'));
+        $this->set("categories", $this->Category->find("all"));
+        $this->set("subcategories", $this->Subcategory->find("all"));
+        $this->set("imagesliders", $this->Imageslider->find("all"));
+
+
+        $products = $this->Product->find("all", array(
+            'conditions' => array(
+                'OR' => array(
+                    'Product.id' => $this->Session->read("Cart"),
+                    'Product.code' => $this->Session->read("Cart")
+                )
+            )
+        ));
+
+
+        $this->set("products", $products);
+    }
+
+    public function checkout() {
+        $this->set("menus", $this->Menu->find('all'));
+        $this->set("categories", $this->Category->find("all"));
+        $this->set("subcategories", $this->Subcategory->find("all"));
+        $this->set("imagesliders", $this->Imageslider->find("all"));
+
+        $products = $this->Product->find("all", array(
+            'conditions' => array(
+                'OR' => array(
+                    'Product.id' => $this->Session->read("Cart"),
+                    'Product.code' => $this->Session->read("Cart")
+                )
+            )
+        ));
+
+        $roles = $this->User->Role->find('all', array(
+            'fields' => array(
+                'Role.id'
+            ),
+            'conditions' => array(
+                'Role.title' => 'USER'
+            )
+        ));
+        $countries = $this->User->Country->find('list');
+        $this->set(compact('roles', 'countries'));
+
+
+        $this->set("products", $products);
+
+
+        if ($this->request->is('post')) {
+
+            $this->request->data['User']['password'] = AuthComponent::password(1234);
+            if ($this->User->save($this->request->data['User'])) {
+                $this->Session->setFlash(__('The user has been saved.'));
+                //return $this->redirect(array('action' => 'index'));
+            } else {
+                $this->Session->setFlash(__('The user could not be saved. Please, try again.'));
+            }
+
+
+
+            $this->Transaction->create();
+            $this->request->data['Transaction']['user_id'] = $this->User->getLastInsertID();
+            if ($this->Transaction->save($this->request->data['Transaction'])) {
+                $this->Session->setFlash(__('The transaction has been saved.'));
+                //return $this->redirect(array('action' => 'index'));
+            } else {
+                $this->Session->setFlash(__('The transaction could not be saved. Please, try again.'));
+            }
+
+
+            foreach ($products as $product) {
+
+                $data=array(
+                    'transaction_id' => $this->Transaction->getLastInsertID(),
+                    'product_id' => $product['Product']['id'],
+                    'quantity' => '1',
+                    'price' => $product['Product']['inrprice']
+                );
+
+                $this->Transactiondetail->create();
+                if ($this->Transactiondetail->save($data)) {
+                    $this->Session->setFlash(__('Order has been placed, THe products willl be de'));
+                    //return $this->redirect(array('action' => 'index'));
+                } else {
+                    $this->Session->setFlash(__('The transactiondetail could not be saved. Please, try again.'));
+                    break;
+                }
+            }
+        }
     }
 
     public function about() {
