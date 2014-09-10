@@ -30,8 +30,8 @@ echo $this->element('attirezone/headertop'); ?>
                         <td class="pro-details"><?php echo $product['Subcategory']['title'] ?></td>
                         <td class="pro-details">1</td>
                         <td class="pro-delivery">FREE</td>
-                        <td class="pro-details">Rs.<?php echo $product['Product']['inrprice']  ?> / $ <?php echo $product['Product']['usdprice'] ?></td>
-                        <td class="pro-details"><a href=""><img src="/img/images/Trash-can-icon.png"></a></td>
+                        <td class="pro-details" style="font-size:14px;">Rs.<?php echo $product['Product']['inrprice']  ?> / $ <?php echo $product['Product']['usdprice'] ?></td>
+                        <td class="pro-details"><a href="/pages/removefromcart/<?php echo $product['Product']['id'] ?>"><img src="/img/images/Trash-can-icon.png" width="20px"></a></td>
                         </tr>
                         <?php $payable_inr+=$product['Product']['inrprice']; $payable_usd+=$product['Product']['usdprice']; } ?>
                     

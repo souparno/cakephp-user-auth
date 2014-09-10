@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>attirezone.com</title>
+</head>
 <!--Top Header Started-->
 <div class="header-top">
     <div class="wrap"> 
@@ -37,4 +42,3 @@
     </div>
 </div>
 <!--Top Header End-->
-

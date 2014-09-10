@@ -27,7 +27,7 @@
                                             <p class="title">Benaras silk</p>
                                             <p class="title" style="float:right; margin-right:5px;">BNR-000001</p>
                                             <div class="price2">
-                                                <span class="actual">Rs.12500 / $203.19</span>
+                                                <span class="actual">Rs.12500 / $206</span>
                                             </div>
                                         </div>
                                         <div class="cart-right"> </div>
@@ -49,7 +49,7 @@
                                             <p class="title">Benaras silk</p>
                                             <p class="title" style="float:right; margin-right:5px;">BNR-000002</p>
                                             <div class="price2">
-                                                <span class="actual">Rs.8500 / $138.17</span>
+                                                <span class="actual">Rs.8500 / $140</span>
                                             </div>
                                         </div>
                                         <div class="cart-right"> </div>
@@ -71,7 +71,7 @@
                                             <p class="title">Benaras silk</p>
                                             <p class="title" style="float:right; margin-right:5px;">BNR-000006</p>
                                             <div class="price2">
-                                                <span class="actual">Rs.15000 / $243.82</span>
+                                                <span class="actual">Rs.15000 / $248</span>
                                             </div>
                                         </div>
                                         <div class="cart-right"> </div>
@@ -93,7 +93,7 @@
                                             <p class="title">Benaras silk</p>
                                             <p class="title" style="float:right; margin-right:5px;">BNR-000004</p>
                                             <div class="price2">
-                                                <span class="actual">Rs.12000 / $195.06</span>
+                                                <span class="actual">Rs.12000 / $198</span>
                                             </div>
                                         </div>
                                         <div class="cart-right"> </div>
@@ -117,7 +117,7 @@
                                             <p class="title">Sada Kalo</p>
                                             <p class="title" style="float:right; margin-right:5px;">BNR-000009</p>
                                             <div class="price2">
-                                                <span class="actual">Rs.9950 / $162.48</span>
+                                                <span class="actual">Rs.9950 / $162</span>
                                             </div>
                                         </div>
                                         <div class="cart-right"> </div>
@@ -138,7 +138,7 @@
                                             <p class="title">Sada Kalo</p>
                                             <p class="title" style="float:right; margin-right:5px;">BNR-000010</p>
                                             <div class="price2">
-                                                <span class="actual">Rs.2350 / $38.37</span>
+                                                <span class="actual">Rs.2350 / $38</span>
                                             </div>
                                         </div>
                                         <div class="cart-right"> </div>
@@ -159,7 +159,7 @@
                                             <p class="title">sada kalo</p>
                                             <p class="title" style="float:right; margin-right:5px;">BNR-000012</p>
                                             <div class="price2">
-                                                <span class="actual">Rs.4550 / $74.3</span>
+                                                <span class="actual">Rs.4550 / $74</span>
                                             </div>
                                         </div>
                                         <div class="cart-right"> </div>
@@ -180,7 +180,7 @@
                                             <p class="title">Benaras cotton</p>
                                             <p class="title" style="float:right; margin-right:5px;">BNR-000023</p>
                                             <div class="price2">
-                                                <span class="actual">Rs.7000 / $114.3</span>
+                                                <span class="actual">Rs.7000 / $114</span>
                                             </div>
                                         </div>
                                         <div class="cart-right"> </div>
@@ -279,7 +279,7 @@
                 <nav>
                     <a href="#">Silks</a>
                     <a href="#">Cottons</a>
-                    <a href="#">Accessoris</a>
+                    <a href="#">Accessories</a>
                 </nav>
             </div>
         </div>

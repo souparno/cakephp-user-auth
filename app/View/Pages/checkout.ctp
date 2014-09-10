@@ -14,24 +14,24 @@ echo $this->element('attirezone/headertop'); ?>
                 <div class="acc-content open">
                     <div class="acc-content-inner">
 
-                        <label> Name:</label>
+                        <label style="margin-right:6%;"> Name:</label>
                         <input type="text" name="data[User][username]" value="" class="large-field"><br>
 
-                        <label>Email:</label>
+                        <label style="margin-right:6.3%;">Email:</label>
                         <input type="text" name="data[User][email]" value="" class="large-field"><br>
 
-                        <label> Phone:</label>
+                        <label style="margin-right:5.7%;"> Phone:</label>
                         <input type="text" name="data[User][phonenumber]"value="" class="large-field"><br>
 
-                        <label> Address :</label>
+                        <label style="margin-right:4.2%;"> Address :</label>
                         <input type="text" name="data[User][address]" value="" class="large-field"><br>
 
 
-                        <label> City:</label>
+                        <label style="margin-right:7.2%;"> City:</label>
                         <input type="text" name="data[User][city]" value="" class="large-field"><br>
 
 
-                        <label> Country:</label>
+                        <label style="margin-right:4.4%;"> Country:</label>
                         <select required="required" id="UserCountryId" name="data[User][country_id]">
                       <?php foreach ($countries as $key => $value) {?>
                             <option value='<?php echo $key ?>'><?php echo $value; ?></option>
@@ -66,8 +66,8 @@ echo $this->element('attirezone/headertop'); ?>
                                         <td class="pro-details"><?php echo $product['Subcategory']['title'] ?></td>
                                         <td class="pro-details">1</td>
                                         <td class="pro-delivery">FREE</td>
-                                        <td class="pro-details">Rs.<?php echo $product['Product']['inrprice']  ?> / $ <?php echo $product['Product']['usdprice'] ?></td>
-                                        <td class="pro-details"><a href=""><img src="/img/images/Trash-can-icon.png"></a></td>
+                                        <td class="pro-details" style="font-size:12px;">Rs.<?php echo $product['Product']['inrprice']  ?> / $ <?php echo $product['Product']['usdprice'] ?></td>
+                                        <td class="pro-details"><a href="/pages/removefromcart/<?php echo $product['Product']['id'] ?>"><img src="/img/images/Trash-can-icon.png" width="20px"></a></td>>
                                     </tr>
                         <?php $payable_inr+=$product['Product']['inrprice']; $payable_usd+=$product['Product']['usdprice']; } ?>
 
@@ -105,7 +105,7 @@ echo $this->element('attirezone/headertop'); ?>
                         <button type="submit" style="float:right;">Continue</button>
 
                         <div class="clearout"></div>
-                        <img width="200" src="/img/images/Credit-Card.png">
+                        <!--<img width="200" src="/img/images/Credit-Card.png">-->
                     </div>
                 </div>
             </div>

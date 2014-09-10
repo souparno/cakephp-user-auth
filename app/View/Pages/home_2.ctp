@@ -44,7 +44,7 @@ echo $this->element('attirezone/headertop'); ?>
                                             <p class="title">Benaras silk</p>
                                             <p class="title" style="float:right; margin-right:5px;">BNR-000002</p>
                                             <div class="price2">
-                                                <span class="actual">Rs.8500 / $138.17</span>
+                                                <span class="actual">Rs.8500 / $140</span>
                                             </div>
                                         </div>
                                         <div class="cart-right"> </div>

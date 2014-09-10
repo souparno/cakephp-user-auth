@@ -42,6 +42,7 @@ class PagesController extends AppController {
         $this->Auth->allow('termsandcondition');
         $this->Auth->allow('cart');
         $this->Auth->allow('checkout');
+        $this->Auth->allow('removefromcart');
     }
 
     /**
@@ -269,11 +270,7 @@ class PagesController extends AppController {
         }
     }
 
-    public function buyproduct($user_id, $productId) {
-        //$this->Session->setFlash($user_id."bought ".$productId);
-        $this->redirect("/");
-    }
-
+    
     public function cart() {
         $this->set("menus", $this->Menu->find('all'));
         $this->set("categories", $this->Category->find("all"));
@@ -293,6 +290,15 @@ class PagesController extends AppController {
 
         $this->set("products", $products);
     }
+
+
+    public function removefromcart($productId){
+       $cart=$this->Session->read("Cart");
+       $cart = array_merge(array_diff($cart, array($productId)));
+       $this->Session->write("Cart", $cart);     
+       $this->redirect("/pages/cart");
+    }
+
 
     public function checkout() {
         $this->set("menus", $this->Menu->find('all'));
@@ -357,8 +363,9 @@ class PagesController extends AppController {
 
                 $this->Transactiondetail->create();
                 if ($this->Transactiondetail->save($data)) {
-                    $this->Session->setFlash(__('Order has been placed, THe products willl be de'));
-                    //return $this->redirect(array('action' => 'index'));
+                    $this->Session->setFlash(__('Order has been placed, The products will be delivered to you shortly'));
+                    $this->Session->delete('Cart');
+                    return $this->redirect("/pages/checkout");
                 } else {
                     $this->Session->setFlash(__('The transactiondetail could not be saved. Please, try again.'));
                     break;
