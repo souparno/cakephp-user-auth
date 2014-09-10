@@ -14,4 +14,3 @@
 <div class="actions">
 <?php echo $this->element("sidenav"); ?>
 </div>
-
