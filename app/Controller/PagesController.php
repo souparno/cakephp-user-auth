@@ -263,7 +263,7 @@ class PagesController extends AppController {
               endif; */
 
             $cart = $this->Session->read("Cart");
-            $cart[] = $productID;
+            if($productID) $cart[] = $productID;
             $this->Session->write("Cart", $cart);
 
             $this->redirect("/pages/cart");
