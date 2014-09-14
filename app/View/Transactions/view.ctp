@@ -21,9 +21,9 @@
 			<?php echo h($transaction['User']['email']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Companyname'); ?></dt>
+		<dt><?php echo __('Address'); ?></dt>
 		<dd>
-			<?php echo h($transaction['User']['companyname']); ?>
+			<?php echo h($transaction['User']['address']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('City'); ?></dt>

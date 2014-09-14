@@ -9,6 +9,7 @@
 		echo $this->Form->input('email');
 		echo $this->Form->input('role_id');
 		echo $this->Form->input('companyname');
+                echo $this->Form->input('address');
 		echo $this->Form->input('country_id');
 		echo $this->Form->input('city');
 		echo $this->Form->input('phonenumber');

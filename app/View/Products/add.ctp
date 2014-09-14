@@ -11,8 +11,8 @@
 		echo $this->Form->input('description');
 		echo $this->Form->input('image1');
 		echo $this->Form->input('image1_small');
-		echo $this->Form->input('newattraction');
-		echo $this->Form->input('featured');
+		echo $this->Form->input('newattraction',array('type'=>'checkbox'));
+		echo $this->Form->input('featured',array('type'=>'checkbox'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

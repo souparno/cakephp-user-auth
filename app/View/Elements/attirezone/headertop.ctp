@@ -31,11 +31,12 @@
                  else:
                      ?>
                 <li><a href="/users/login">Log in</a></li> |
+                <li><a href="/users/add">Sign Up</a></li>
                 <?php
                  endif;                     
                 ?>
                 
-                <li><a href="/users/add">Sign Up</a></li>
+                
             </ul>
         </div>
         <div class="clear"></div>
