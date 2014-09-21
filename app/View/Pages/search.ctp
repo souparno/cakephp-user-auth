@@ -53,17 +53,6 @@
                 </div>
                 <?php $start=$start+3;   if($start>=count($products))    break; } ?>
                 <!--Boxes End-->
-
-
-
-
-
-
-
-
-
-
-
             </div>
             <div class="rsidebar span_1_of_left">
                 <section class="sky-form">
