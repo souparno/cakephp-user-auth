@@ -162,7 +162,7 @@ class UsersController extends AppController {
                 
                 
                 if(!$product_id):
-                    $this->redirect ("/");
+                    $this->redirect ("/wishlists");
                 else:
                     $this->redirect("/pages/buyproduct/".$this->Auth->user('id')."/".$product_id);
                 endif;
