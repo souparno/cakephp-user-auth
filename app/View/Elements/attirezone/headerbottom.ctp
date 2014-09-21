@@ -70,11 +70,11 @@
         </div>
         <!--Search Box-->
         <div class="header-bottom-right">
-            <div class="search">	  
-                <input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {
-                            this.value = 'Search';
-                        }">
-                <input type="submit" value="Subscribe" id="submit" name="submit">
+            <div class="search">
+                <form method="POST" action="/pages/search">
+                    <input type="text" name="s" class="textbox" placeholder="Search" name="search" >
+                    <input type="submit" value="Search" id="submit" name="submit">
+                </form>                
                 <div id="response"> </div>
             </div>
             <!--Cart Section-->

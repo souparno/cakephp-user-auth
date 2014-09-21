@@ -204,7 +204,7 @@ class PagesController extends AppController {
         }
 
 
-        if ($this->request->data) {
+        if ($this->request->data['price']) {
             $price1 = split("-", $this->request->data['price'][0]);
             $price2 = split("-", $this->request->data['price'][count($this->request->data['price']) - 1]);
             $min_price = $price1[0];
@@ -224,6 +224,18 @@ class PagesController extends AppController {
                 ),
                 'order' => array('product.id' => 'asc')
             );
+        }
+        
+        if($this->request->data['search']){
+            
+            $this->paginate=array(
+                'limit'=>9,
+                'conditions'=>array(
+                    
+                )
+            );
+            
+            
         }
 
         $this->set('products', $this->paginate('Product'));
