@@ -111,7 +111,7 @@ class PagesController extends AppController {
     }
 
     public function search($param = NULL) {
-        $this->set("products", $this->Product->find("all"));
+        //$this->set("products", $this->Product->find("all"));
         $this->set("menus", $this->Menu->find('all'));
         $this->set("categories", $this->Category->find("all"));
         $this->set("subcategories", $this->Subcategory->find("all"));
@@ -235,7 +235,6 @@ class PagesController extends AppController {
         $this->set("categories", $this->Category->find("all"));
         $this->set("subcategories", $this->Subcategory->find("all"));
 
-        //$this->Product->recursive=3;
         $product = $this->Product->find("all", array(
             'conditions' => array(
                 'OR' => array(
@@ -256,21 +255,13 @@ class PagesController extends AppController {
 
         if ($this->request->data("Buy")) {
 
-            /* if ($this->Session->check('Auth.User')) :
-              $this->buyproduct($this->Auth->user('id'), $productID);
-              else :
-              $this->redirect("/users/login/" . $productID);
-              endif; */
-
             $cart = $this->Session->read("Cart");
-            if($productID) $cart[] = $productID;
+            $cart[] = $productID;
             $this->Session->write("Cart", $cart);
-
             $this->redirect("/pages/cart");
         }
     }
 
-    
     public function cart() {
         $this->set("menus", $this->Menu->find('all'));
         $this->set("categories", $this->Category->find("all"));
@@ -291,14 +282,39 @@ class PagesController extends AppController {
         $this->set("products", $products);
     }
 
-
-    public function removefromcart($productId){
-       $cart=$this->Session->read("Cart");
-       $cart = array_merge(array_diff($cart, array($productId)));
-       $this->Session->write("Cart", $cart);     
-       $this->redirect("/pages/cart");
+    public function removefromcart($productId) {
+        $cart = $this->Session->read("Cart");
+        $cart = array_merge(array_diff($cart, array($productId)));
+        $this->Session->write("Cart", $cart);
+        $this->redirect("/pages/cart");
     }
 
+    public function wishlist($productID) {
+
+        $this->set("menus", $this->Menu->find('all'));
+        $this->set("categories", $this->Category->find("all"));
+        $this->set("subcategories", $this->Subcategory->find("all"));
+
+
+
+        $wishlist = $this->Session->read("Wishlist");
+        $wishlist[] = $productID;
+        $this->Session->write("Wishlist", $wishlist);
+
+        $this->paginate = array(
+            'limit' => 9,
+            'conditions' => array(
+                'OR' => array(
+                    'Product.id' => $wishlist,
+                    'Product.code' => $wishlist
+                )
+            ),
+            'order' => array('product.id' => 'asc')
+        );
+
+
+        $this->set('products', $this->paginate('Product'));
+    }
 
     public function checkout() {
         $this->set("menus", $this->Menu->find('all'));
@@ -354,7 +370,7 @@ class PagesController extends AppController {
 
             foreach ($products as $product) {
 
-                $data=array(
+                $data = array(
                     'transaction_id' => $this->Transaction->getLastInsertID(),
                     'product_id' => $product['Product']['id'],
                     'quantity' => '1',

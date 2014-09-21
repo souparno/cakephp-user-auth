@@ -5,11 +5,10 @@
 </head>
 <!--Top Header Started-->
 <div class="header-top">
-    <div class="wrap"> 
-        <ul class="f-list1">
-            <li>
-               <?php echo $this->Html->image('images/2.png'); ?>
-                <span class="f-text1">Free &nbsp;Shipping&nbsp; Nationwide</span>
+    <div class="wrap">
+	<ul class="f-list1">
+            <li><?php echo $this->Html->image('images/2.png'); ?>
+                <span class="f-text1">Free &nbsp;Shipping &nbsp; Nationwide</span>
                 <div class="clear"></div>			
             </li>
         </ul>
@@ -31,12 +30,12 @@
                  else:
                      ?>
                 <li><a href="/users/login">Log in</a></li> |
-                <li><a href="/users/add">Sign Up</a></li>
+		 <li><a href="/users/add">Sign Up</a></li>
                 <?php
                  endif;                     
                 ?>
                 
-                
+               
             </ul>
         </div>
         <div class="clear"></div>
