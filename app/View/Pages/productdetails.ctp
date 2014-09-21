@@ -28,7 +28,7 @@
                             <input name="Buy" type="submit" value="Add To Cart" title="">                            
                         </form>
                     </div>
-                    <span class="m_link"><a href="/pages/wishlist/<?php echo $product[0]['Product']['id'] ?>">Save to wishlist</a> </span> 
+                    <span class="m_link"><a href="/wishlists/add/<?php echo $product[0]['Product']['id'] ?>">Save to wishlist</a> </span> 
                     <p class="m_text2"> </p>
                 </div>
                 <div class="clear"></div>

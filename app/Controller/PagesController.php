@@ -289,33 +289,6 @@ class PagesController extends AppController {
         $this->redirect("/pages/cart");
     }
 
-    public function wishlist($productID) {
-
-        $this->set("menus", $this->Menu->find('all'));
-        $this->set("categories", $this->Category->find("all"));
-        $this->set("subcategories", $this->Subcategory->find("all"));
-
-
-
-        $wishlist = $this->Session->read("Wishlist");
-        $wishlist[] = $productID;
-        $this->Session->write("Wishlist", $wishlist);
-
-        $this->paginate = array(
-            'limit' => 9,
-            'conditions' => array(
-                'OR' => array(
-                    'Product.id' => $wishlist,
-                    'Product.code' => $wishlist
-                )
-            ),
-            'order' => array('product.id' => 'asc')
-        );
-
-
-        $this->set('products', $this->paginate('Product'));
-    }
-
     public function checkout() {
         $this->set("menus", $this->Menu->find('all'));
         $this->set("categories", $this->Category->find("all"));
@@ -351,7 +324,6 @@ class PagesController extends AppController {
             $this->request->data['User']['password'] = AuthComponent::password(1234);
             if ($this->User->save($this->request->data['User'])) {
                 $this->Session->setFlash(__('The user has been saved.'));
-                //return $this->redirect(array('action' => 'index'));
             } else {
                 $this->Session->setFlash(__('The user could not be saved. Please, try again.'));
             }
@@ -362,7 +334,6 @@ class PagesController extends AppController {
             $this->request->data['Transaction']['user_id'] = $this->User->getLastInsertID();
             if ($this->Transaction->save($this->request->data['Transaction'])) {
                 $this->Session->setFlash(__('The transaction has been saved.'));
-                //return $this->redirect(array('action' => 'index'));
             } else {
                 $this->Session->setFlash(__('The transaction could not be saved. Please, try again.'));
             }
