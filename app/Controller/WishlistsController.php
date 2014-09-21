@@ -16,7 +16,7 @@ class WishlistsController extends AppController {
      * @var array
      */
     public $components = array('Paginator');
-    public $uses = array('Menu', 'Category', 'Subcategory','Product','Wishlist');
+    public $uses = array('Menu', 'Category', 'Subcategory', 'Product', 'Wishlist');
 
     /**
      * Layout name
@@ -45,34 +45,19 @@ class WishlistsController extends AppController {
 
 
         $productIDs = $this->Wishlist->find('list', array(
-            'fields'=>array('Wishlist.product_id'),
+            'fields' => array('Wishlist.product_id'),
             'conditions' => array(
                 'Wishlist.user_id' => $userID
             )
-           )
+                )
         );
 
         $this->paginate = array('limit' => 9,
-        'conditions' => array(
-        'Product.id' => $productIDs
-        )
+            'conditions' => array(
+                'Product.id' => $productIDs
+            )
         );
         $this->set('products', $this->paginate('Product'));
-    }
-
-    /**
-     * view method
-     *
-     * @throws NotFoundException
-     * @param string $id
-     * @return void
-     */
-    public function view($id = null) {
-        if (!$this->Wishlist->exists($id)) {
-            throw new NotFoundException(__('Invalid wishlist'));
-        }
-        $options = array('conditions' => array('Wishlist.' . $this->Wishlist->primaryKey => $id));
-        $this->set('wishlist', $this->Wishlist->find('first', $options));
     }
 
     /**
@@ -105,33 +90,6 @@ class WishlistsController extends AppController {
         //$users = $this->Wishlist->User->find('list');
         //$products = $this->Wishlist->Product->find('list');
         //$this->set(compact('users', 'products'));
-    }
-
-    /**
-     * edit method
-     *
-     * @throws NotFoundException
-     * @param string $id
-     * @return void
-     */
-    public function edit($id = null) {
-        if (!$this->Wishlist->exists($id)) {
-            throw new NotFoundException(__('Invalid wishlist'));
-        }
-        if ($this->request->is(array('post', 'put'))) {
-            if ($this->Wishlist->save($this->request->data)) {
-                $this->Session->setFlash(__('The wishlist has been saved.'));
-                return $this->redirect(array('action' => 'index'));
-            } else {
-                $this->Session->setFlash(__('The wishlist could not be saved. Please, try again.'));
-            }
-        } else {
-            $options = array('conditions' => array('Wishlist.' . $this->Wishlist->primaryKey => $id));
-            $this->request->data = $this->Wishlist->find('first', $options);
-        }
-        $users = $this->Wishlist->User->find('list');
-        $products = $this->Wishlist->Product->find('list');
-        $this->set(compact('users', 'products'));
     }
 
     /**
