@@ -20,7 +20,7 @@
                    <li><a href="">Welcome , <?php echo $user['User']['username']; ?></a></li>  |
                  <?php } ?>
                 <li class="active"><a href="">Account</a></li> |
-                <li><a href="">Wishlist</a></li> |
+                <li><a href="/wishlists">Wishlist</a></li> |
                 <li><a href="/pages/checkout">Checkout</a></li> |
                 <?php 
                  if($this->Session->check('Auth.User')):

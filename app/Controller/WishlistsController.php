@@ -16,7 +16,7 @@ class WishlistsController extends AppController {
      * @var array
      */
     public $components = array('Paginator');
-    public $uses = array('Menu', 'Category', 'Subcategory');
+    public $uses = array('Menu', 'Category', 'Subcategory','Product','Wishlist');
 
     /**
      * Layout name
@@ -32,12 +32,32 @@ class WishlistsController extends AppController {
      */
     public function index() {
 
+
         $this->set("menus", $this->Menu->find('all'));
         $this->set("categories", $this->Category->find("all"));
         $this->set("subcategories", $this->Subcategory->find("all"));
 
-        $this->paginate = array('limit' => 9);
-        $this->set('wishlists', $this->Paginator->paginate());
+
+        if ($this->Session->check('Auth.User')) {
+            $auth = $this->Session->read('Auth');
+            $userID = $auth['User']['id'];
+        }
+
+
+        $productIDs = $this->Wishlist->find('list', array(
+            'fields'=>array('Wishlist.product_id'),
+            'conditions' => array(
+                'Wishlist.user_id' => $userID
+            )
+           )
+        );
+
+        $this->paginate = array('limit' => 9,
+        'conditions' => array(
+        'Product.id' => $productIDs
+        )
+        );
+        $this->set('products', $this->paginate('Product'));
     }
 
     /**
