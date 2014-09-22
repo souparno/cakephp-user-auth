@@ -11,8 +11,8 @@
 			<th><?php echo $this->Paginator->sort('features'); ?></th>
 			<th><?php echo $this->Paginator->sort('description'); ?></th>
 			<th><?php echo $this->Paginator->sort('image1_small'); ?></th>
-	        	<th><?php echo $this->Paginator->sort('stock'); ?></th>
-                	<th class="actions"><?php echo __('Actions'); ?></th>
+			<th><?php echo $this->Paginator->sort('stock'); ?></th>
+			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
 	<tbody>
@@ -28,7 +28,7 @@
 		<td><?php echo h($product['Product']['features']); ?>&nbsp;</td>
 		<td><?php echo h($product['Product']['description']); ?>&nbsp;</td>
                 <td><?php echo $this->Html->image("images/".h($product['Product']['image1_small']), array('height'=>'auto','width'=>'100px')); ?>  &nbsp;</td>
-                <td><?php echo h($product['Product']['stock']); ?>&nbsp;</td>
+		<td><?php echo h($product['Product']['stock']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $product['Product']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $product['Product']['id'])); ?>

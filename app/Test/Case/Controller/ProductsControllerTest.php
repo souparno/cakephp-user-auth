@@ -16,7 +16,13 @@ class ProductsControllerTest extends ControllerTestCase {
 		'app.product',
 		'app.subcategory',
 		'app.category',
-		'app.menu'
+		'app.menu',
+		'app.transactiondetail',
+		'app.transaction',
+		'app.user',
+		'app.role',
+		'app.country',
+		'app.wishlist'
 	);
 
 /**

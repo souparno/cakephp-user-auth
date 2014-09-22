@@ -14,7 +14,7 @@
 		echo $this->Form->input('image1_small');
 		echo $this->Form->input('newattraction',array('type'=>'checkbox'));
 		echo $this->Form->input('featured',array('type'=>'checkbox'));
-                echo $this->Form->input('stock');
+		echo $this->Form->input('stock');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
