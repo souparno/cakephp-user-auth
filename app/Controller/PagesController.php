@@ -205,10 +205,7 @@ class PagesController extends AppController {
 
         
         if (isset($this->request->data['price'])) {
-            
-            echo "echo searchin gptoducts by price";
-            
-            
+           
             $price1 = split("-", $this->request->data['price'][0]);
             $price2 = split("-", $this->request->data['price'][count($this->request->data['price']) - 1]);
             $min_price = $price1[0];
@@ -230,13 +227,14 @@ class PagesController extends AppController {
             );
         }
 
-        if (isset($this->request->data['search']) ){
+        if (isset($this->request->data['s']) ){
 
-            
-            echo "echo searchin gptoducts by search";
+           $subcategory_id = $this->Subcategory->find('list', array(
 
-            $subcategory_id = $this->Subcategory->find('all', array('conditions' => array(
-                    'Subcategory.title like' => $this->request->data['search']
+                 'fields'=>array('Subcategory.id'),
+                 'conditions' => array(
+                    
+                    'Subcategory.title LIKE' => "%". $this->request->data['s'] ."%"
             )));
 
 
