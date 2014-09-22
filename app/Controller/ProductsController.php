@@ -11,13 +11,6 @@ App::uses('AppController', 'Controller');
 class ProductsController extends AppController {
 
     /**
-     * Layout name
-     *
-     * @var array
-     */
-    public $layout = 'admin';
-
-    /**
      * Components
      *
      * @var array

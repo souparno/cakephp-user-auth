@@ -46,16 +46,6 @@
 			<?php echo h($product['Product']['image1_small']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Created'); ?></dt>
-		<dd>
-			<?php echo h($product['Product']['created']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
-		<dd>
-			<?php echo h($product['Product']['modified']); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('Newattraction'); ?></dt>
 		<dd>
 			<?php echo h($product['Product']['newattraction']); ?>
@@ -64,6 +54,21 @@
 		<dt><?php echo __('Featured'); ?></dt>
 		<dd>
 			<?php echo h($product['Product']['featured']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Stock'); ?></dt>
+		<dd>
+			<?php echo h($product['Product']['stock']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Created'); ?></dt>
+		<dd>
+			<?php echo h($product['Product']['created']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Modified'); ?></dt>
+		<dd>
+			<?php echo h($product['Product']['modified']); ?>
 			&nbsp;
 		</dd>
 	</dl>
@@ -75,7 +80,5 @@
 		<li><?php echo $this->Form->postLink(__('Delete Product'), array('action' => 'delete', $product['Product']['id']), array(), __('Are you sure you want to delete # %s?', $product['Product']['id'])); ?> </li>
 		<li><?php echo $this->Html->link(__('List Products'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Product'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Subcategories'), array('controller' => 'subcategories', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Subcategory'), array('controller' => 'subcategories', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

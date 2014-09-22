@@ -1,19 +1,7 @@
-<?php
-
-echo $this->element('admin/header'); ?>
-<?php echo $this->element("admin/leftnav"); ?> 
-<section id="main-content">
-    <section class="wrapper">
-
-
-        <!-- BASIC FORM ELELEMNTS -->
-        <div class="row mt">
-            <div class="col-lg-12">
-                <div class="form-panel">
-                    <h4 class="mb"><i class="fa fa-angle-right"></i><?php echo __('Edit Product'); ?></h4>
+<div class="products form">
 <?php echo $this->Form->create('Product'); ?>
-                    <fieldset>
-                        <legend><?php echo __('Edit Product'); ?></legend>
+	<fieldset>
+		<legend><?php echo __('Edit Product'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('subcategory_id');
@@ -26,29 +14,16 @@ echo $this->element('admin/header'); ?>
 		echo $this->Form->input('image1_small');
 		echo $this->Form->input('newattraction',array('type'=>'checkbox'));
 		echo $this->Form->input('featured',array('type'=>'checkbox'));
+                echo $this->Form->input('stock');
 	?>
-                        <table>
-                            <tr>
-                                <td>Samll Image</td>
-                                <td>Large Image</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="/img/images/<?php echo $this->request->data['Product']['image1_small']; ?>" style="width: 100px; height: auto;">
-                                </td>
-                                <td>
-                                    <img src="/img/images/silk/pic/<?php echo $this->request->data['Product']['image1']; ?>" style="width: 100px; height: auto;">
-                                </td>
-                            </tr>
-                        </table>
-                    </fieldset>
+	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
+</div>
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
 
-                </div>
-            </div><!-- col-lg-12-->      	
-        </div><!-- /row -->
-
-
-
-    </section><!-- --/wrapper ---->
-</section>
+		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Product.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Product.id'))); ?></li>
+		<li><?php echo $this->Html->link(__('List Products'), array('action' => 'index')); ?></li>
+	</ul>
+</div>

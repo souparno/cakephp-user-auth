@@ -11,8 +11,9 @@
 		echo $this->Form->input('description');
 		echo $this->Form->input('image1');
 		echo $this->Form->input('image1_small');
-		echo $this->Form->input('newattraction',array('type'=>'checkbox'));
+	        echo $this->Form->input('newattraction',array('type'=>'checkbox'));
 		echo $this->Form->input('featured',array('type'=>'checkbox'));
+		echo $this->Form->input('stock');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
@@ -22,7 +23,5 @@
 	<ul>
 
 		<li><?php echo $this->Html->link(__('List Products'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Subcategories'), array('controller' => 'subcategories', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Subcategory'), array('controller' => 'subcategories', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
