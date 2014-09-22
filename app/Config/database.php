@@ -56,7 +56,7 @@
  */
 class DATABASE_CONFIG {
 
-    /*public $default = array(
+   /* public $default = array(
         'datasource' => 'Database/Mysql',
         'persistent' => false,
         'host' => 'localhost',
@@ -67,7 +67,7 @@ class DATABASE_CONFIG {
             //'encoding' => 'utf8',
     );*/
 
-     public $default = array(
+    public $default = array(
       'datasource' => 'Database/Mysql',
       'persistent' => false,
       'host' => 'localhost',
