@@ -25,10 +25,15 @@ echo $this->element('attirezone/headertop'); ?>
 
                         <label style="margin-right:4.2%;"> Address :</label>
                         <input type="text" name="data[User][address]" value="" class="large-field"><br>
-
+                        
+                        <label style="margin-right:4.2%;"> Street :</label>
+                        <input type="text" name="data[User][street]" value="" class="large-field"><br>
 
                         <label style="margin-right:7.2%;"> City:</label>
                         <input type="text" name="data[User][city]" value="" class="large-field"><br>
+
+                        <label style="margin-right:7.2%;"> State:</label>
+                        <input type="text" name="data[User][state]" value="" class="large-field"><br>
 
 
                         <label style="margin-right:4.4%;"> Country:</label>
@@ -37,8 +42,16 @@ echo $this->element('attirezone/headertop'); ?>
                             <option value='<?php echo $key ?>'><?php echo $value; ?></option>
                       <?php } ?>
                         </select>
+                        
+                        <br/>
 
-                        <br>
+
+                        <label style="margin-right:7.2%;"> Pin Code:</label>
+                        <input type="text" name="data[User][pincode]" value="" class="large-field"><br>
+
+
+
+                        <br/>
                         <input type="hidden" value="<?php echo $roles[0]['Role']['id'] ?>"name="data[User][role_id]"/>
                         <div class="clear"></div>
                     </div>
