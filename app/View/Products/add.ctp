@@ -1,5 +1,5 @@
 <div class="products form">
-<?php echo $this->Form->create('Product'); ?>
+<?php echo $this->Form->create('Product',array('type' => 'file')); ?>
 	<fieldset>
 		<legend><?php echo __('Add Product'); ?></legend>
 	<?php
@@ -9,8 +9,8 @@
 		echo $this->Form->input('usdprice');
 		echo $this->Form->input('features');
 		echo $this->Form->input('description');
-		echo $this->Form->input('image1');
-		echo $this->Form->input('image1_small');
+		echo $this->Form->input('image1',array('type'=>'file'));
+		echo $this->Form->input('image1_small',array('type'=>'file'));
 	        echo $this->Form->input('newattraction',array('type'=>'checkbox'));
 		echo $this->Form->input('featured',array('type'=>'checkbox'));
 		echo $this->Form->input('stock');
